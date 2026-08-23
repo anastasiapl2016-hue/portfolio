@@ -410,6 +410,8 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-ba-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:4px 0 28px;}
 .cs-ba-note{font-size:16px;line-height:1.6;color:#555;max-width:840px;margin:0;}
 @media(max-width:768px){.cs-ba-metrics{grid-template-columns:1fr;}}
+
+.cs-ba-stat{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:#1a1a1a;line-height:1.25;margin:0 0 12px;}
 </style>
 </head>
 <body>
@@ -1099,9 +1101,9 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   </div>
 
   <div class="cs-ba-callouts">
-    <div class="cs-ba-callout"><div class="cs-ba-num2">01</div><h4>Состояние резерва — с одного экрана</h4><p>Менеджер возвращается в карточку десятки раз за день — понять, что с резервом. Раньше статус, срок и клиента приходилось доставать из модалок: я вынесла их на один экран.</p></div>
-    <div class="cs-ba-callout"><div class="cs-ba-num2">02</div><h4>Развела действия, чтобы не отменить лишнее</h4><p>Отмена резерва необратима, а её кнопка стояла в одном ряду с правкой товаров. Я разнесла действия по объектам — риск случайной отмены важнее плотного ряда кнопок.</p></div>
-    <div class="cs-ba-callout"><div class="cs-ba-num2">03</div><h4>Правка количества — одним сохранением</h4><p>Раньше каждое изменение количества менеджер подтверждал отдельно. Я собрала правку в одно действие с одним сохранением — рутина перестала растягиваться на серию подтверждений.</p></div>
+    <div class="cs-ba-callout"><div class="cs-ba-num2">01</div><div class="cs-ba-stat">2 модалки → 0</div><p>Статус, срок, клиент и связь с заявкой прятались за кнопками «Клиент» и «Данные резерва». Менеджер открывает карточку десятки раз в день — я вынесла ключевое на основной экран, и состояние резерва считывается сразу.</p></div>
+    <div class="cs-ba-callout"><div class="cs-ba-num2">02</div><div class="cs-ba-stat">Отмена рядом с правкой → разведены</div><p>Отмена резерва необратима, но её кнопка стояла в одном ряду с правкой товаров. Я разнесла действия по объектам — случайный клик больше не отменяет резерв вместо изменения количества.</p></div>
+    <div class="cs-ba-callout"><div class="cs-ba-num2">03</div><div class="cs-ba-stat">Серия подтверждений → 1 сохранение</div><p>Каждое изменение количества менеджер подтверждал отдельно. Я собрала правку в одно действие: меняешь сколько нужно и сохраняешь один раз.</p></div>
   </div>
 </div>
 
