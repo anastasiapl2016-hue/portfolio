@@ -1186,8 +1186,6 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   </div>
 </div>
 
-</div>
-
 <!-- CASE FOOTER -->
 <div class="cs-contacts-section">
   <div class="contacts-wrap">
@@ -1225,14 +1223,60 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 </div>
 <script>
 // ── PAGE SWITCH ─────────────────────────────────────────────────
-function showPage(p) {
-  if (p === 'case') p = 'case-page';
-  document.getElementById('main-page').style.display = p === 'main' ? 'block' : 'none';
-  document.querySelectorAll('.cs-page').forEach(function(el){
-    el.style.display = (p !== 'main' && el.id === p) ? 'block' : 'none';
+/* --- SPA router: instant scroll, scroll restore, working browser Back --- */
+(function(){
+  var mainScroll = 0;
+  function base(){ return location.pathname + location.search; }
+  function jump(y){
+    var root = document.documentElement, prev = root.style.scrollBehavior;
+    root.style.scrollBehavior = 'auto';
+    void root.offsetHeight;            /* force reflow so new page height is known */
+    window.scrollTo(0, y || 0);
+    root.scrollTop = y || 0;           /* belt-and-suspenders after display switch */
+    root.style.scrollBehavior = prev;
+  }
+  function apply(page){
+    var isMain = (page === 'main');
+    var mp = document.getElementById('main-page');
+    if (mp) mp.style.display = isMain ? 'block' : 'none';
+    document.querySelectorAll('.cs-page').forEach(function(el){
+      el.style.display = (!isMain && el.id === page) ? 'block' : 'none';
+    });
+  }
+  window.showPage = function(p){
+    if (p === 'case') p = 'case-page';
+    var cur = (history.state && history.state.page) || 'main';
+    if (p === cur){ jump(p === 'main' ? window.pageYOffset : 0); return; }
+    if (cur === 'main'){
+      mainScroll = window.pageYOffset;
+      history.replaceState({page:'main', scroll:mainScroll}, '', base());
+    }
+    if (p === 'main'){
+      if (history.state && history.state.page && history.state.page !== 'main'){ history.back(); return; }
+      apply('main'); jump(mainScroll);
+      history.replaceState({page:'main', scroll:mainScroll}, '', base());
+    } else {
+      apply(p); jump(0);
+      history.pushState({page:p, scroll:0}, '', base() + '#' + p);
+    }
+  };
+  window.addEventListener('popstate', function(e){
+    var st = e.state || {page:'main', scroll:mainScroll};
+    apply(st.page);
+    jump(st.page === 'main' ? (st.scroll != null ? st.scroll : mainScroll) : (st.scroll || 0));
   });
-  window.scrollTo(0, 0);
-}
+  function init(){
+    var hash = (location.hash || '').replace(/^#/,'');
+    var el = hash && document.getElementById(hash);
+    if (el && el.classList && el.classList.contains('cs-page')){
+      apply(hash); history.replaceState({page:hash, scroll:0}, '', base() + '#' + hash); jump(0);
+    } else {
+      apply('main'); history.replaceState({page:'main', scroll:0}, '', base());
+    }
+  }
+  if (document.readyState !== 'loading') init();
+  else document.addEventListener('DOMContentLoaded', init);
+})();
 
 // ── PHOTO MODAL ─────────────────────────────────────────────────
 function openPhotoModal() {
