@@ -824,7 +824,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 <nav class="cs-nav">
   <div class="cs-nav-left">
     <a href="#" onclick="showPage('main');return false;" class="cs-logo">AP</a>
-    <a href="#" onclick="showPage('main');return false;" class="cs-back">← Все кейсы</a>
+    <a href="#" onclick="goCases();return false;" class="cs-back">← Все кейсы</a>
   </div>
   <a href="https://t.me/zefirqa" class="cs-nav-tg">Написать в тг</a>
 </nav>
@@ -1020,7 +1020,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   </div>
 </div>
 <footer class="cs-page-footer">
-  <a href="#" onclick="showPage('main');return false;" class="cs-pf-back">← Все кейсы</a>
+  <a href="#" onclick="goCases();return false;" class="cs-pf-back">← Все кейсы</a>
   <span class="cs-pf-info">Анастасия Плотникова · Product Designer · Москва · 2026</span>
 </footer>
 
@@ -1032,7 +1032,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 <nav class="cs-nav">
   <div class="cs-nav-left">
     <a href="#" onclick="showPage('main');return false;" class="cs-logo">AP</a>
-    <a href="#" onclick="showPage('main');return false;" class="cs-back">← Все кейсы</a>
+    <a href="#" onclick="goCases();return false;" class="cs-back">← Все кейсы</a>
   </div>
   <a href="https://t.me/zefirqa" class="cs-nav-tg">Написать в тг</a>
 </nav>
@@ -1219,7 +1219,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   </div>
 </div>
 <footer class="cs-page-footer">
-  <a href="#" onclick="showPage('main');return false;" class="cs-pf-back">← Все кейсы</a>
+  <a href="#" onclick="goCases();return false;" class="cs-pf-back">← Все кейсы</a>
   <span class="cs-pf-info">Анастасия Плотникова · Product Designer · Москва · 2026</span>
 </footer>
 
@@ -1236,7 +1236,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 // ── PAGE SWITCH ─────────────────────────────────────────────────
 /* --- SPA router: instant scroll, scroll restore, working browser Back --- */
 (function(){
-  var mainScroll = 0;
+  var mainScroll = 0, wantCases = false;
   function base(){ return location.pathname + location.search; }
   function jump(y){
     var root = document.documentElement, prev = root.style.scrollBehavior;
@@ -1271,16 +1271,32 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
       history.pushState({page:p, scroll:0}, '', base() + '#' + p);
     }
   };
+  function scrollToCases(){
+    void document.documentElement.offsetHeight;
+    var c = document.getElementById('cases');
+    var y = c ? Math.round(c.getBoundingClientRect().top + window.pageYOffset) : 0;
+    jump(y); mainScroll = y;
+  }
+  window.goCases = function(){
+    var cur = (history.state && history.state.page) || 'main';
+    if (cur === 'main'){ scrollToCases(); return; }
+    if (history.state && history.state.root){
+      apply('main'); history.pushState({page:'main', scroll:0}, '', base()); scrollToCases();
+    } else {
+      wantCases = true; history.back();
+    }
+  };
   window.addEventListener('popstate', function(e){
     var st = e.state || {page:'main', scroll:mainScroll};
     apply(st.page);
-    jump(st.page === 'main' ? (st.scroll != null ? st.scroll : mainScroll) : (st.scroll || 0));
+    if (st.page === 'main' && wantCases){ wantCases = false; scrollToCases(); }
+    else jump(st.page === 'main' ? (st.scroll != null ? st.scroll : mainScroll) : (st.scroll || 0));
   });
   function init(){
     var hash = (location.hash || '').replace(/^#/,'');
     var el = hash && document.getElementById(hash);
     if (el && el.classList && el.classList.contains('cs-page')){
-      apply(hash); history.replaceState({page:hash, scroll:0}, '', base() + '#' + hash); jump(0);
+      apply(hash); history.replaceState({page:hash, scroll:0, root:true}, '', base() + '#' + hash); jump(0);
     } else {
       apply('main'); history.replaceState({page:'main', scroll:0}, '', base());
     }
