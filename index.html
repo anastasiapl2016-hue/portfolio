@@ -417,6 +417,11 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-ba-sep{border:0;border-top:1px solid #e5e5e7;margin:48px 56px 0;}
 @media(max-width:768px){.cs-ba-sep{margin:32px 20px 0;}}
 .cs-ba-grid2 .cs-meta-label{font-weight:500;}
+
+.cs-nav-left{display:flex;align-items:center;gap:24px;}
+.cs-nav-tg{font-size:16px;padding:11px 24px;background:#151515;border-radius:100px;color:#fff;text-decoration:none;transition:background .2s;}
+.cs-nav-tg:hover{background:#2c2c2c;}
+@media(max-width:768px){.cs-nav-left{gap:16px;}.cs-nav-tg{padding:8px 16px;}}
 </style>
 </head>
 <body>
@@ -817,8 +822,11 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 <div id="case-page" class="cs-page">
 
 <nav class="cs-nav">
-  <a href="#" onclick="showPage('main');return false;" class="cs-logo">AP</a>
-  <a href="#" onclick="showPage('main');return false;" class="cs-back">← Все кейсы</a>
+  <div class="cs-nav-left">
+    <a href="#" onclick="showPage('main');return false;" class="cs-logo">AP</a>
+    <a href="#" onclick="showPage('main');return false;" class="cs-back">← Все кейсы</a>
+  </div>
+  <a href="https://t.me/zefirqa" class="cs-nav-tg">Написать в тг</a>
 </nav>
 <!-- CASE HERO -->
 <div class="cs-hero">
@@ -1022,8 +1030,11 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 <div id="case-page-2" class="cs-page" style="display:none">
 
 <nav class="cs-nav">
-  <a href="#" onclick="showPage('main');return false;" class="cs-logo">AP</a>
-  <a href="#" onclick="showPage('main');return false;" class="cs-back">← Все кейсы</a>
+  <div class="cs-nav-left">
+    <a href="#" onclick="showPage('main');return false;" class="cs-logo">AP</a>
+    <a href="#" onclick="showPage('main');return false;" class="cs-back">← Все кейсы</a>
+  </div>
+  <a href="https://t.me/zefirqa" class="cs-nav-tg">Написать в тг</a>
 </nav>
 
 <!-- CASE HERO -->
@@ -1177,7 +1188,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   <div class="cs-results-lbl">Результат</div>
   <div class="cs-results">
     <div class="cs-results-left">
-    <h2 class="cs-h2">Почти не трогая бэкенд, пересобрала ключевые сценарии вокруг задач продавца: убрала лишние шаги, снизила цену ошибки и <span class="cs-accent">сократила путь до продажи</span></h2>
+    <h2 class="cs-h2">Почти не трогая бэкенд, пересобрала ключевые сценарии вокруг задач продавца: убрала лишние шаги, снизила цену ошибки и <span class="cs-accent">сократила путь до продажи на ≈ 30%</span></h2>
     </div>
     <div class="cs-res-grid">
       <div class="cs-res-card"><div class="cs-res-n">5 сценариев</div><div class="cs-res-t">упростила по продукту в целом</div></div>
