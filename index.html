@@ -422,6 +422,40 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .sdots{display:flex;gap:6px;align-items:center;flex-shrink:0;}
 .sdot{width:8px;height:8px;border-radius:50%;background:#D0D0D0;}
 .sdot.on{background:#FF9CD1;}
+/* ── ROOFLY (case-page-3) ── */
+.cs-page .rf-check{color:#FF9CD1;font-weight:700;}
+.cs-page .cs-ph{border:2px dashed #C8C8C8;border-radius:16px;background:#EFEFEF;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 32px;min-height:280px;}
+.cs-page .cs-ph-in{max-width:440px;display:flex;flex-direction:column;align-items:center;gap:12px;}
+.cs-page .cs-ph-tag{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9a9a9a;}
+.cs-page .cs-ph-txt{font-size:16px;color:#8a8a8a;line-height:1.5;}
+.cs-page .cs-eff-label{font-size:16px;color:#666;font-weight:700;margin-top:20px;margin-bottom:8px;}
+.cs-page .cs-eff{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+.cs-page .cs-eff li{position:relative;padding-left:20px;font-size:16px;color:#555;line-height:1.6;}
+.cs-page .cs-eff li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:#FF9CD1;}
+.cs-page .cs-scope{display:inline-block;background:#EFEFEF;color:#666;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;border-radius:100px;padding:4px 12px;margin-bottom:12px;}
+.cs-page .rf-hyp{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
+.cs-page .rf-card{background:#EFEFEF;border-radius:16px;padding:24px;}
+.cs-page .rf-card-h{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:16px;}
+.cs-page .rf-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
+.cs-page .rf-dot-yes{background:#2FBF71;}
+.cs-page .rf-dot-no{background:#E0523E;}
+.cs-page .rf-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.cs-page .rf-list li{position:relative;padding-left:20px;font-size:16px;color:#555;line-height:1.6;}
+.cs-page .rf-list li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:#C8C8C8;}
+.cs-page .rf-ask{background:#EFEFEF;border-radius:16px;padding:24px;}
+.cs-page .rf-ask-l{font-size:16px;color:#666;margin-bottom:16px;}
+.cs-page .rf-pivot{background:#1a1a1a;border-radius:20px;padding:32px;margin-top:24px;}
+.cs-page .rf-pivot-l{font-size:16px;color:#FF9CD1;font-weight:700;margin-bottom:12px;}
+.cs-page .rf-pivot-t{font-size:20px;line-height:1.5;color:#f0ede8;max-width:760px;}
+.cs-page .rf-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px;}
+.cs-page .rf-stat{background:#1a1a1a;border-radius:16px;padding:24px 20px;}
+.cs-page .rf-stat-n{font-family:'Inter',sans-serif;font-size:32px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px;}
+.cs-page .rf-stat-t{font-size:16px;color:#999;line-height:1.4;}
+@media(max-width:768px){
+.cs-page .rf-hyp{grid-template-columns:1fr;}
+.cs-page .rf-stats{grid-template-columns:1fr 1fr;}
+.cs-page .cs-ph{min-height:200px;padding:32px 20px;}
+}
 </style>
 </head>
 <body>
@@ -534,8 +568,8 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
         </div>
       </div>
     </a>
-    <a class="case-card" href="#">
-      <div class="case-thumb"><div class="case-thumb-ph">Скоро</div></div>
+    <a class="case-card" href="#" onclick="showPage('case-page-3');return false;">
+      <div class="case-thumb"><div class="case-thumb-ph">Roofly</div></div>
       <div class="case-body">
         <div class="case-name">Roofly</div>
         <div class="case-desc">Сервис взаимодействия с соседями — от кастдева до MVP и рекламной кампании</div>
@@ -1185,6 +1219,253 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 </footer>
 
 </div><!-- /#case-page-2 -->
+
+<!-- CASE PAGE 3 — Roofly -->
+<div id="case-page-3" class="cs-page" style="display:none">
+
+<nav class="cs-nav">
+  <div class="cs-nav-left">
+    <a href="#" onclick="showPage('main');return false;" class="cs-logo">AP</a>
+    <a href="#" onclick="goCases();return false;" class="cs-back">← Все кейсы</a>
+  </div>
+  <a href="https://t.me/zefirqa" class="cs-nav-tg">Написать в тг</a>
+</nav>
+<!-- CASE HERO -->
+<div class="cs-hero">
+  <div>
+    <div class="cs-label">Кейс 03 — 0→1 · Consumer · Research</div>
+    <h1 class="cs-h1">Roofly</h1>
+    <p class="cs-desc"><strong>Roofly</strong> — мобильный сервис для&nbsp;жителей многоквартирных домов. Он&nbsp;достаёт важное из&nbsp;общего потока, помогает решать бытовые задачи и&nbsp;находить нужных соседей, не&nbsp;заставляя раскрывать личные данные.</p>
+    <p class="cs-desc"><strong>Начинала с&nbsp;идеи локальной соцсети.</strong> За&nbsp;2,5&nbsp;месяца провела продукт от&nbsp;исследования проблемы до&nbsp;MVP, интерактивного прототипа, лендинга и&nbsp;первого теста спроса.</p>
+    <p class="cs-desc"><strong>Делала одна, от&nbsp;первого интервью до&nbsp;рекламного теста.</strong> Ресёрч, продуктовые решения, дизайн, лендинг и&nbsp;проверку гипотезы на&nbsp;живых людях.</p>
+    <div class="cs-meta">
+      <div><div class="cs-meta-label">Роль</div><div class="cs-meta-val">Автор продукта · дизайнер</div></div>
+      <div><div class="cs-meta-label">Формат</div><div class="cs-meta-val">Личный 0→1, ВШЭ</div></div>
+      <div><div class="cs-meta-label">Срок</div><div class="cs-meta-val">2,5&nbsp;месяца</div></div>
+    </div>
+  </div>
+  <div class="cs-team">
+    <div class="cs-team-title">Сделала сама</div>
+    <div class="cs-team-row"><span class="cs-team-role">Исследование</span><span class="rf-check">✓</span></div>
+    <div class="cs-team-row"><span class="cs-team-role">Продуктовые гипотезы</span><span class="rf-check">✓</span></div>
+    <div class="cs-team-row"><span class="cs-team-role">MVP</span><span class="rf-check">✓</span></div>
+    <div class="cs-team-row"><span class="cs-team-role">Интерактивный прототип</span><span class="rf-check">✓</span></div>
+    <div class="cs-team-row"><span class="cs-team-role">Лендинг</span><span class="rf-check">✓</span></div>
+    <div class="cs-team-row"><span class="cs-team-role">Тест спроса</span><span class="rf-check">✓</span></div>
+  </div>
+</div>
+<!-- RESEARCH -->
+<div class="cs-problem-outer">
+  <div class="cs-problem-grid">
+    <div class="cs-problem-col">
+      <div class="cs-sec-label">Исследование</div>
+      <h2 class="cs-h2">Домовой чат берётся за&nbsp;всё сразу и&nbsp;с&nbsp;каждой задачей справляется плохо</h2>
+      <p class="cs-text">В&nbsp;одном потоке живут объявления управляющей компании, бытовые просьбы, продажи, споры и&nbsp;болтовня. Важное тонет, у&nbsp;просьб нет статуса, а&nbsp;писать незнакомому соседу неловко.</p>
+      <p class="cs-text cs-text-mt">Я&nbsp;сомневалась, что&nbsp;жителям вообще нужен ещё один соседский сервис. Поэтому пошла это проверять, а&nbsp;не&nbsp;достраивать продукт на&nbsp;догадках.</p>
+    </div>
+    <div class="cs-problem-col">
+      <div class="rf-ask">
+        <div class="rf-ask-l">Проверяла на&nbsp;20&nbsp;интервью с&nbsp;жителями многоквартирных домов три исходные гипотезы:</div>
+        <ul class="rf-list">
+          <li>важное теряется в&nbsp;шуме;</li>
+          <li>людям нужен локальный контакт с&nbsp;соседями;</li>
+          <li>соседи готовы бесплатно помогать друг&nbsp;другу.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="rf-hyp">
+    <div class="rf-card">
+      <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
+      <ul class="rf-list">
+        <li>Важное действительно теряется в&nbsp;шуме.</li>
+        <li>Локальный контакт нужен, но&nbsp;знакомиться проще с&nbsp;конкретной задачи, а&nbsp;не&nbsp;просто так.</li>
+      </ul>
+    </div>
+    <div class="rf-card">
+      <div class="rf-card-h"><span class="rf-dot rf-dot-no"></span>Не&nbsp;подтвердилось</div>
+      <ul class="rf-list">
+        <li>Массово и&nbsp;бесплатно помогать незнакомым соседям никто не&nbsp;рвётся: щедрость на&nbsp;практике оказалась редкой.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="rf-pivot">
+    <div class="rf-pivot-l">Поворот продукта</div>
+    <div class="rf-pivot-t">После интервью я&nbsp;отказалась от&nbsp;соседской соцсети. Вместо общения ради общения собрала спокойный инструмент: важные уведомления, конкретные бытовые задачи и&nbsp;безопасный контакт.</div>
+  </div>
+</div>
+<!-- SCREENS -->
+<div class="cs-screens">
+  <div class="cs-block">
+    <div class="cs-ph">
+      <div class="cs-ph-in">
+        <span class="cs-ph-tag">Здесь экран</span>
+        <span class="cs-ph-txt">Экран «Объявления рядом» крупно. Рядом можно показать тематические чаты или настройку «Уведомлять только о&nbsp;важном».</span>
+      </div>
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-num">01 — Приоритетная лента</div>
+      <h3 class="cs-h3">Отделила важное от&nbsp;общего шума, чтобы уведомления по&nbsp;дому не&nbsp;терялись в&nbsp;болтовне</h3>
+      <p class="cs-sdesc">Официальные и&nbsp;приоритетные сообщения дома и&nbsp;района отделены от&nbsp;пользовательского контента. Источник виден сразу, а&nbsp;житель может включить уведомления только по&nbsp;важному.</p>
+      <p class="cs-sdesc">Обсуждение никуда не&nbsp;делось: оно живёт в&nbsp;комментариях и&nbsp;не&nbsp;смешивается с&nbsp;самим уведомлением.</p>
+      <div class="cs-eff-label">Продуктовый эффект</div>
+      <ul class="cs-eff">
+        <li>критичное сообщение получает отдельный приоритет;</li>
+        <li>житель сам управляет уровнем шума;</li>
+        <li>новость об&nbsp;отключении или ремонте не&nbsp;тонет в&nbsp;общем чате.</li>
+      </ul>
+      <div class="cs-tags"><span class="cs-tag">MVP</span><span class="cs-tag">Feed</span><span class="cs-tag">Notifications</span></div>
+    </div>
+  </div>
+  <div class="cs-block">
+    <div class="cs-ph">
+      <div class="cs-ph-in">
+        <span class="cs-ph-tag">Здесь экран</span>
+        <span class="cs-ph-txt">Список заявок со&nbsp;статусами и&nbsp;экран создания заявки либо каталог запросов.</span>
+      </div>
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-num">02 — Структурированные запросы</div>
+      <h3 class="cs-h3">Превратила просьбу в&nbsp;задачу со&nbsp;статусом, у&nbsp;которой есть начало и&nbsp;конец</h3>
+      <p class="cs-sdesc">Вместо свободного сообщения в&nbsp;чате житель создаёт запрос с&nbsp;понятным типом, зоной видимости и&nbsp;статусом.</p>
+      <p class="cs-sdesc">Автор видит, взяли задачу в&nbsp;работу или уже закрыли. Запрос не&nbsp;растворяется в&nbsp;переписке, у&nbsp;сценария появляются старт и&nbsp;финал.</p>
+      <div class="cs-eff-label">Продуктовый эффект</div>
+      <ul class="cs-eff">
+        <li>запрос можно найти и&nbsp;отследить;</li>
+        <li>участникам понятны контекст и&nbsp;текущий статус;</li>
+        <li>бытовая задача не&nbsp;превращается в&nbsp;бесконечное обсуждение.</li>
+      </ul>
+      <div class="cs-tags"><span class="cs-tag">MVP</span><span class="cs-tag">Requests</span><span class="cs-tag">Statuses</span></div>
+    </div>
+  </div>
+  <div class="cs-block">
+    <div class="cs-ph">
+      <div class="cs-ph-in">
+        <span class="cs-ph-tag">Здесь экран</span>
+        <span class="cs-ph-txt">Экран «Соседи». На&nbsp;карточках должны хорошо читаться навыки и&nbsp;причины для&nbsp;контакта.</span>
+      </div>
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-num">03 — Поиск релевантного соседа</div>
+      <h3 class="cs-h3">Сделала так, что&nbsp;сосед находится под&nbsp;конкретную задачу, а&nbsp;не&nbsp;через навязанное знакомство</h3>
+      <p class="cs-sdesc">Каталог собран не&nbsp;как соцлента, а&nbsp;как поиск человека под&nbsp;ситуацию. Искать можно по&nbsp;дому и&nbsp;району, интересам, навыкам и&nbsp;отметке «чем могу помочь».</p>
+      <p class="cs-sdesc">Так падает барьер первого контакта: не&nbsp;нужно набиваться в&nbsp;друзья к&nbsp;незнакомому человеку без&nbsp;повода.</p>
+      <div class="cs-eff-label">Продуктовый эффект</div>
+      <ul class="cs-eff">
+        <li>человек находится по&nbsp;задаче или общему интересу;</li>
+        <li>локальный контекст виден ещё до&nbsp;контакта;</li>
+        <li>продукт не&nbsp;превращается в&nbsp;соседский дейтинг.</li>
+      </ul>
+      <div class="cs-tags"><span class="cs-tag">MVP</span><span class="cs-tag">Discovery</span><span class="cs-tag">Local relevance</span></div>
+    </div>
+  </div>
+  <div class="cs-block">
+    <div class="cs-ph">
+      <div class="cs-ph-in">
+        <span class="cs-ph-tag">Здесь экран</span>
+        <span class="cs-ph-txt">Экран профиля с&nbsp;настройкой видимости квартиры. Можно добавить фрагмент безопасного первого сообщения.</span>
+      </div>
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-num">04 — Доверие и&nbsp;приватность</div>
+      <h3 class="cs-h3">Дала человеку решать, что&nbsp;о&nbsp;себе показывать, ещё до&nbsp;первого сообщения</h3>
+      <p class="cs-sdesc">Профиль показывает только то, что&nbsp;нужно для&nbsp;решения: дом, район, интересы, навыки и&nbsp;возможную помощь.</p>
+      <p class="cs-sdesc">Номер квартиры и&nbsp;телефон можно скрыть. Первый контакт идёт внутри сервиса, без&nbsp;обязательного раскрытия личных данных.</p>
+      <div class="cs-eff-label">Продуктовый эффект</div>
+      <ul class="cs-eff">
+        <li>доверие складывается ещё до&nbsp;личного контакта;</li>
+        <li>человек сохраняет контроль над&nbsp;приватностью;</li>
+        <li>общаться могут даже незнакомые соседи.</li>
+      </ul>
+      <div class="cs-tags"><span class="cs-tag">MVP</span><span class="cs-tag">Privacy</span><span class="cs-tag">Trust</span></div>
+    </div>
+  </div>
+  <div class="cs-block">
+    <div class="cs-ph">
+      <div class="cs-ph-in">
+        <span class="cs-ph-tag">Здесь экран</span>
+        <span class="cs-ph-txt">Каталог аренды. Показать как развитие продукта после проверки основных сценариев, не&nbsp;как ядро MVP.</span>
+      </div>
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-scope">Развитие продукта</div>
+      <div class="cs-num">05 — Обмен вместо абстрактной помощи</div>
+      <h3 class="cs-h3">Развернула механику под&nbsp;гипотезу, которая не&nbsp;подтвердилась: не&nbsp;обещание помощи, а&nbsp;понятные условия</h3>
+      <p class="cs-sdesc">Исследование показало: рассчитывать на&nbsp;массовую бесплатную взаимопомощь наивно. Людям проще договариваться, когда условия понятны заранее.</p>
+      <p class="cs-sdesc">Поэтому в&nbsp;продукте появились аренда, обмен и&nbsp;честно указанная стоимость вместо общего обещания «соседи помогут».</p>
+      <div class="cs-eff-label">Продуктовый эффект</div>
+      <ul class="cs-eff">
+        <li>у&nbsp;взаимодействия появляются прозрачные условия;</li>
+        <li>уходит социальная неловкость;</li>
+        <li>ценность возникает для&nbsp;обеих сторон.</li>
+      </ul>
+      <div class="cs-tags"><span class="cs-tag">Next scope</span><span class="cs-tag">Exchange</span><span class="cs-tag">Rental</span></div>
+    </div>
+  </div>
+  <div class="cs-block">
+    <div class="cs-ph">
+      <div class="cs-ph-in">
+        <span class="cs-ph-tag">Здесь экран</span>
+        <span class="cs-ph-txt">Экран списка чатов. Рядом можно показать комментарии под&nbsp;объявлением.</span>
+      </div>
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-scope">Развитие продукта</div>
+      <div class="cs-num">06 — Чаты вынесены из&nbsp;ядра</div>
+      <h3 class="cs-h3">Убрала общение из&nbsp;операционного слоя, чтобы шум не&nbsp;управлял всем продуктом</h3>
+      <p class="cs-sdesc">Тематические группы и&nbsp;комментарии отделены от&nbsp;важных уведомлений и&nbsp;бытовых запросов.</p>
+      <p class="cs-sdesc">В&nbsp;чат по&nbsp;интересу можно вступить, но&nbsp;критичная информация и&nbsp;задачи дома не&nbsp;зависят от&nbsp;активности сообщества.</p>
+      <div class="cs-eff-label">Продуктовый эффект</div>
+      <ul class="cs-eff">
+        <li>шум не&nbsp;пачкает основные сценарии;</li>
+        <li>группы становятся осознанным выбором;</li>
+        <li>продукт полезен даже без&nbsp;активного общения.</li>
+      </ul>
+      <div class="cs-tags"><span class="cs-tag">Next scope</span><span class="cs-tag">Groups</span><span class="cs-tag">Comments</span></div>
+    </div>
+  </div></div><!-- /cs-screens -->
+<!-- RESULTS -->
+<div class="cs-results-outer">
+  <div class="cs-results-lbl">Проверка спроса</div>
+  <h2 class="cs-h2">Поменяла продуктовую гипотезу до&nbsp;того, как в&nbsp;разработку ушёл хоть рубль</h2>
+  <p class="cs-sdesc">Собрала лендинг с&nbsp;новым позиционированием: важное о&nbsp;доме без&nbsp;шума и&nbsp;бытовая помощь рядом. Запустила небольшой рекламный тест.</p>
+  <div class="rf-stats">
+    <div class="rf-stat"><div class="rf-stat-n">20</div><div class="rf-stat-t">интервью в&nbsp;исследовании</div></div>
+    <div class="rf-stat"><div class="rf-stat-n">1</div><div class="rf-stat-t">исходная гипотеза отклонена</div></div>
+    <div class="rf-stat"><div class="rf-stat-n">92</div><div class="rf-stat-t">уникальных визита на&nbsp;лендинг</div></div>
+    <div class="rf-stat"><div class="rf-stat-n">5</div><div class="rf-stat-t">заявок на&nbsp;ранний доступ</div></div>
+    <div class="rf-stat"><div class="rf-stat-n">5,4%</div><div class="rf-stat-t">конверсия визита в&nbsp;заявку</div></div>
+  </div>
+  <p class="cs-res-note">Проблема считывается аудиторией и&nbsp;доводит до&nbsp;целевого действия. Но&nbsp;выборка маленькая: для&nbsp;вывода о&nbsp;product-market fit её недостаточно, дальше нужен объём.</p>
+</div>
+<!-- CASE FOOTER -->
+<div class="cs-contacts-section">
+  <div class="contacts-wrap">
+    <div>
+      <div class="contacts-heading">Спасибо<br>за интерес)<br><em>Пишите!</em></div>
+    </div>
+    <div class="contact-links">
+      <a href="https://t.me/zefirqa" class="c-link">
+        <div><div class="c-lbl">Telegram</div><div class="c-val">@zefirqa</div></div>
+        <span class="c-arr"><svg width="18" height="18" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.50707 0.00109648C9.78064 0.00408165 10.0012 0.226813 10.0012 0.501096C10.0014 0.514486 10.0064 0.919801 10.0618 1.755C10.1488 3.06931 10.0439 2.95892 10.1008 3.40246L10.1213 3.60266L10.1223 3.61145V3.62024C10.1262 3.74527 10.1254 3.85645 10.1145 3.99426C10.1094 4.05801 10.1016 4.13063 10.094 4.21008C10.086 4.293 10.0761 4.39685 10.0657 4.53821C10.0452 4.81345 9.80574 5.02037 9.5305 5.00012C9.25512 4.97969 9.04913 4.73937 9.06957 4.46399C9.0807 4.31396 9.08944 4.20255 9.09789 4.11438C9.10665 4.02292 9.11324 3.9679 9.11742 3.91516C9.12459 3.82449 9.12575 3.75336 9.12328 3.66516C9.09901 3.32239 9.16435 3.38041 9.06566 1.87024C8.7608 2.16941 8.45513 2.49409 8.27855 2.70032C8.08296 2.92868 7.75267 3.26421 7.41039 3.59485C6.98462 4.00612 6.63699 4.26282 6.36644 4.45227C6.07219 4.65831 5.95494 4.73229 5.87425 4.82336C5.61111 5.1205 5.13915 5.55753 4.8557 5.84387C4.54096 6.16184 4.0379 6.83717 3.41625 7.76965C2.90122 8.54219 2.32597 9.25922 1.84789 9.80774C1.38 10.3446 0.978317 10.7513 0.811754 10.8839C0.595705 11.0558 0.280567 11.0198 0.108629 10.8038C-0.0631986 10.5878 -0.027268 10.2726 0.188707 10.1007C0.276547 10.0307 0.625647 9.68784 1.09398 9.15051C1.55231 8.62464 2.09929 7.94235 2.58421 7.21496C3.20281 6.28708 3.75367 5.5359 4.14476 5.14074C4.493 4.78894 4.88248 4.43644 5.12621 4.16125C5.30856 3.95534 5.57242 3.78753 5.7932 3.63293C6.03782 3.46163 6.33964 3.23777 6.71507 2.87512C7.05393 2.5478 7.35578 2.24022 7.51878 2.04992C7.70604 1.83124 8.00881 1.5095 8.31566 1.20617C8.24367 1.203 8.1708 1.1997 8.09984 1.1925C7.76002 1.15799 7.83424 1.21369 7.41039 1.28625L7.40257 1.28723L7.39574 1.28821C7.25968 1.30749 7.0953 1.32702 6.79418 1.39758C6.47827 1.47161 6.06561 1.59074 5.76976 1.74328C5.52437 1.86992 5.22159 1.77383 5.09496 1.52844C4.96867 1.28318 5.06565 0.982208 5.31078 0.855589C5.71925 0.644813 6.22965 0.50271 6.56566 0.423948C6.90354 0.344776 7.10729 0.319491 7.24046 0.300901C7.66658 0.227996 7.56622 0.179849 7.90257 0.213987C8.01707 0.225616 8.44873 0.212671 8.59691 0.213987C8.70741 0.214972 9.13134 0.0742238 9.36644 0.0206277C9.38558 0.0152547 9.40504 0.0110095 9.42503 0.00793241C9.45678 0.00212489 9.48276 -0.000626154 9.50023 0.000119914C9.50269 0.000230285 9.50496 0.000786445 9.50707 0.00109648Z" fill="currentColor"/></svg></span>
+      </a>
+      <a href="mailto:anastasia.pl.2016@gmail.com" class="c-link">
+        <div><div class="c-lbl">Email</div><div class="c-val">anastasia.pl.2016@gmail.com</div></div>
+        <span class="c-arr"><svg width="18" height="18" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.50707 0.00109648C9.78064 0.00408165 10.0012 0.226813 10.0012 0.501096C10.0014 0.514486 10.0064 0.919801 10.0618 1.755C10.1488 3.06931 10.0439 2.95892 10.1008 3.40246L10.1213 3.60266L10.1223 3.61145V3.62024C10.1262 3.74527 10.1254 3.85645 10.1145 3.99426C10.1094 4.05801 10.1016 4.13063 10.094 4.21008C10.086 4.293 10.0761 4.39685 10.0657 4.53821C10.0452 4.81345 9.80574 5.02037 9.5305 5.00012C9.25512 4.97969 9.04913 4.73937 9.06957 4.46399C9.0807 4.31396 9.08944 4.20255 9.09789 4.11438C9.10665 4.02292 9.11324 3.9679 9.11742 3.91516C9.12459 3.82449 9.12575 3.75336 9.12328 3.66516C9.09901 3.32239 9.16435 3.38041 9.06566 1.87024C8.7608 2.16941 8.45513 2.49409 8.27855 2.70032C8.08296 2.92868 7.75267 3.26421 7.41039 3.59485C6.98462 4.00612 6.63699 4.26282 6.36644 4.45227C6.07219 4.65831 5.95494 4.73229 5.87425 4.82336C5.61111 5.1205 5.13915 5.55753 4.8557 5.84387C4.54096 6.16184 4.0379 6.83717 3.41625 7.76965C2.90122 8.54219 2.32597 9.25922 1.84789 9.80774C1.38 10.3446 0.978317 10.7513 0.811754 10.8839C0.595705 11.0558 0.280567 11.0198 0.108629 10.8038C-0.0631986 10.5878 -0.027268 10.2726 0.188707 10.1007C0.276547 10.0307 0.625647 9.68784 1.09398 9.15051C1.55231 8.62464 2.09929 7.94235 2.58421 7.21496C3.20281 6.28708 3.75367 5.5359 4.14476 5.14074C4.493 4.78894 4.88248 4.43644 5.12621 4.16125C5.30856 3.95534 5.57242 3.78753 5.7932 3.63293C6.03782 3.46163 6.33964 3.23777 6.71507 2.87512C7.05393 2.5478 7.35578 2.24022 7.51878 2.04992C7.70604 1.83124 8.00881 1.5095 8.31566 1.20617C8.24367 1.203 8.1708 1.1997 8.09984 1.1925C7.76002 1.15799 7.83424 1.21369 7.41039 1.28625L7.40257 1.28723L7.39574 1.28821C7.25968 1.30749 7.0953 1.32702 6.79418 1.39758C6.47827 1.47161 6.06561 1.59074 5.76976 1.74328C5.52437 1.86992 5.22159 1.77383 5.09496 1.52844C4.96867 1.28318 5.06565 0.982208 5.31078 0.855589C5.71925 0.644813 6.22965 0.50271 6.56566 0.423948C6.90354 0.344776 7.10729 0.319491 7.24046 0.300901C7.66658 0.227996 7.56622 0.179849 7.90257 0.213987C8.01707 0.225616 8.44873 0.212671 8.59691 0.213987C8.70741 0.214972 9.13134 0.0742238 9.36644 0.0206277C9.38558 0.0152547 9.40504 0.0110095 9.42503 0.00793241C9.45678 0.00212489 9.48276 -0.000626154 9.50023 0.000119914C9.50269 0.000230285 9.50496 0.000786445 9.50707 0.00109648Z" fill="currentColor"/></svg></span>
+      </a>
+      <div class="c-link c-link-static">
+        <div><div class="c-lbl">Телефон</div><div class="c-val">+7 (960) 959 56-77</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="cs-page-footer">
+  <a href="#" onclick="goCases();return false;" class="cs-pf-back">← Все кейсы</a>
+  <span class="cs-pf-info">Анастасия Плотникова · Product Designer · Москва · 2026</span>
+</footer>
+
+</div><!-- /#case-page-3 -->
+
 
 <!-- CASE IMAGE MODAL -->
 <div id="cs-modal-overlay" onclick="closeCsModal()">
