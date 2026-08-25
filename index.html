@@ -127,8 +127,6 @@ h1{font-family:'Inter',sans-serif;font-size:28px;font-weight:700;line-height:0.9
 .skill-list{display:flex;flex-direction:column;gap:9px;}
 .skill-item{display:flex;justify-content:space-between;align-items:center;font-size:16px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,0.07);}
 .skill-list .skill-item:last-child{border-bottom:none;}
-.sbar-wrap{width:56px;height:3px;background:#FF9CD1;border-radius:2px;overflow:hidden;flex-shrink:0;}
-.sbar{height:100%;background:#1a1a1a;border-radius:2px;}
 
 /* ── ADDITIONAL ── */
 .add-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
@@ -420,6 +418,10 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 @media(max-width:768px){#cs-modal-prev{left:8px;}#cs-modal-next{right:8px;}#cs-modal-prev,#cs-modal-next{width:40px;height:40px;font-size:24px;}}
 .cs-res-note{font-size:14px;color:#666;line-height:1.5;margin-top:20px;max-width:820px;}
 .cs-star{font-size:0.62em;vertical-align:0.35em;font-weight:400;}
+
+.sdots{display:flex;gap:6px;align-items:center;flex-shrink:0;}
+.sdot{width:10px;height:10px;border-radius:50%;background:#D0D0D0;}
+.sdot.on{background:#FF9CD1;}
 </style>
 </head>
 <body>
@@ -684,34 +686,34 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
     <div class="skill-col">
       <div class="skill-col-title">Product Design</div>
       <div class="skill-list">
-        <div class="skill-item">Проектирование интерфейсов<div class="sbar-wrap"><div class="sbar" style="width:95%"></div></div></div>
-        <div class="skill-item">UX Research &amp; CustDev<div class="sbar-wrap"><div class="sbar" style="width:85%"></div></div></div>
-        <div class="skill-item">Сложный B2B / таблицы<div class="sbar-wrap"><div class="sbar" style="width:90%"></div></div></div>
-        <div class="skill-item">Customer Journey Map<div class="sbar-wrap"><div class="sbar" style="width:80%"></div></div></div>
-        <div class="skill-item">Design Systems<div class="sbar-wrap"><div class="sbar" style="width:80%"></div></div></div>
-        <div class="skill-item">Работа с разработкой<div class="sbar-wrap"><div class="sbar" style="width:85%"></div></div></div>
+        <div class="skill-item">Проектирование интерфейсов<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span></div></div>
+        <div class="skill-item">UX Research &amp; CustDev<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Сложный B2B / таблицы<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span></div></div>
+        <div class="skill-item">Customer Journey Map<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Design Systems<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Работа с разработкой<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
       </div>
     </div>
     <div class="skill-col">
       <div class="skill-col-title">Инструменты</div>
       <div class="skill-list">
-        <div class="skill-item">Figma<div class="sbar-wrap"><div class="sbar" style="width:97%"></div></div></div>
-        <div class="skill-item">FigJam<div class="sbar-wrap"><div class="sbar" style="width:85%"></div></div></div>
-        <div class="skill-item">Tilda<div class="sbar-wrap"><div class="sbar" style="width:80%"></div></div></div>
-        <div class="skill-item">Adobe Illustrator<div class="sbar-wrap"><div class="sbar" style="width:75%"></div></div></div>
-        <div class="skill-item">After Effects<div class="sbar-wrap"><div class="sbar" style="width:65%"></div></div></div>
-        <div class="skill-item">Notion / Miro<div class="sbar-wrap"><div class="sbar" style="width:80%"></div></div></div>
+        <div class="skill-item">Figma<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span></div></div>
+        <div class="skill-item">FigJam<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Tilda<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Adobe Illustrator<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">After Effects<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Notion / Miro<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
       </div>
     </div>
     <div class="skill-col">
       <div class="skill-col-title">Сферы</div>
       <div class="skill-list">
-        <div class="skill-item">B2B Internal Tools<div class="sbar-wrap"><div class="sbar" style="width:90%"></div></div></div>
-        <div class="skill-item">0→1 Product Launch<div class="sbar-wrap"><div class="sbar" style="width:85%"></div></div></div>
-        <div class="skill-item">Fintech / Payments<div class="sbar-wrap"><div class="sbar" style="width:75%"></div></div></div>
-        <div class="skill-item">Logistics &amp; Ops<div class="sbar-wrap"><div class="sbar" style="width:85%"></div></div></div>
-        <div class="skill-item">Маркетинг / Брендинг<div class="sbar-wrap"><div class="sbar" style="width:70%"></div></div></div>
-        <div class="skill-item">Motion &amp; Illustration<div class="sbar-wrap"><div class="sbar" style="width:65%"></div></div></div>
+        <div class="skill-item">B2B Internal Tools<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span></div></div>
+        <div class="skill-item">0→1 Product Launch<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Fintech / Payments<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Logistics &amp; Ops<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Маркетинг / Брендинг<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span></div></div>
+        <div class="skill-item">Motion &amp; Illustration<div class="sdots"><span class="sdot on"></span><span class="sdot on"></span><span class="sdot on"></span><span class="sdot"></span><span class="sdot"></span></div></div>
       </div>
     </div>
   </div>
