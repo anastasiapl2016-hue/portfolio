@@ -449,7 +449,9 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .rf-card{background:#EFEFEF;border-radius:16px;padding:24px;}
 .cs-page .rf-card .cs-text,.cs-page .rf-ins .cs-text,.cs-page .rf-card .rf-list li{color:#1a1a1a;}
 #case-page-3 .cs-text,#case-page-3 .cs-sdesc,#case-page-3 .rf-list li,#case-page-3 .rf-quote{line-height:1.6;}
-.cs-page .rf-hyp3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px;}
+.cs-page .rf-hyp3{display:grid;grid-template-columns:repeat(3,1fr);column-gap:24px;grid-template-rows:auto auto auto;margin-top:24px;}
+.cs-page .rf-ins{grid-row:span 3;display:grid;grid-template-rows:subgrid;row-gap:12px;}
+.cs-page .rf-ins .rf-card-h,.cs-page .rf-ins .cs-text{margin:0;}
 .cs-page .rf-quote{font-size:16px;color:#666;line-height:1.5;font-style:italic;border-left:2px solid #FF9CD1;padding-left:12px;}
 .cs-page .rf-card-h{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:16px;}
 .cs-page .rf-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
@@ -466,7 +468,8 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .rf-stat-n{font-family:'Inter',sans-serif;font-size:32px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px;}
 .cs-page .rf-stat-t{font-size:16px;color:#999;line-height:1.4;}
 @media(max-width:768px){
-.cs-page .rf-hyp,.cs-page .rf-hyp3{grid-template-columns:1fr;}
+.cs-page .rf-hyp,.cs-page .rf-hyp3{grid-template-columns:1fr;grid-template-rows:none;row-gap:24px;}
+.cs-page .rf-ins{grid-row:auto;display:flex;flex-direction:column;gap:12px;}
 .cs-page .rf-stats{grid-template-columns:1fr 1fr;}
 .cs-page .cs-ph{min-height:200px;padding:32px 20px;}
 }
@@ -1273,7 +1276,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
       <ul class="rf-list">
         <li>нет единого места без&nbsp;шума, где быстро и&nbsp;достоверно узнать про&nbsp;отключения, аварии и&nbsp;перекрытия;</li>
         <li>не&nbsp;хватает друзей на&nbsp;районе, но&nbsp;знакомиться легче с&nbsp;конкретного дела, чем с&nbsp;дружбы;</li>
-        <li>соседи будут помогать друг&nbsp;другу бесплатно, если дать им площадку.</li>
+        <li>между незнакомыми соседями хватает доверия, чтобы свободно помогать и&nbsp;просить.</li>
       </ul>
     </div>
     <div class="rf-card">
@@ -1289,18 +1292,18 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   <div class="rf-hyp3">
     <div class="rf-ins">
       <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
-      <p class="cs-text" style="margin:0 0 12px">Важное теряется в&nbsp;шуме общего чата.</p>
+      <p class="cs-text">Важное теряется в&nbsp;шуме общего чата.</p>
       <div class="rf-quote">«Районных новостей у&nbsp;нас нет. Хочется заранее знать про&nbsp;перекрытие улицы, а&nbsp;негде.»</div>
     </div>
     <div class="rf-ins">
       <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
-      <p class="cs-text" style="margin:0 0 12px">Контакт нужен, но&nbsp;начинать проще с&nbsp;конкретного дела, а&nbsp;не&nbsp;со&nbsp;знакомства.</p>
+      <p class="cs-text">Контакт нужен, но&nbsp;начинать проще с&nbsp;конкретного дела, а&nbsp;не&nbsp;со&nbsp;знакомства.</p>
       <div class="rf-quote">«Соседка несколько раз меня так выручала.»</div>
     </div>
     <div class="rf-ins">
       <div class="rf-card-h"><span class="rf-dot rf-dot-no"></span>Не&nbsp;подтвердилось</div>
-      <p class="cs-text" style="margin:0 0 12px">Одной площадки мало: обмен идёт на&nbsp;понятных условиях, а&nbsp;поломки в&nbsp;доме адресуют УК, а&nbsp;не&nbsp;соседям.</p>
-      <div class="rf-quote">«Дать инструмент, если надо, можно. Но&nbsp;просить просверлить за&nbsp;500&nbsp;рублей в&nbsp;день — уже вопрос.»</div>
+      <p class="cs-text">Доверия к&nbsp;незнакомым не&nbsp;хватает: и&nbsp;попросить, и&nbsp;помочь мешает неловкость.</p>
+      <div class="rf-quote">«Хотел попросить у&nbsp;соседей лобзик, но&nbsp;не&nbsp;хватило смелости: „подумают, дурак“. В&nbsp;итоге обошёлся сам.»</div>
     </div>
   </div>
   <div class="rf-pivot">
