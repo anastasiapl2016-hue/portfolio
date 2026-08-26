@@ -435,6 +435,8 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .cs-scope{display:inline-block;background:#EFEFEF;color:#666;font-size:12px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;border-radius:100px;padding:4px 12px;margin-bottom:12px;}
 .cs-page .rf-hyp{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
 .cs-page .rf-card{background:#EFEFEF;border-radius:16px;padding:24px;}
+.cs-page .rf-hyp3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px;}
+.cs-page .rf-quote{font-size:16px;color:#666;line-height:1.5;font-style:italic;border-left:2px solid #FF9CD1;padding-left:12px;}
 .cs-page .rf-card-h{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:16px;}
 .cs-page .rf-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;}
 .cs-page .rf-dot-yes{background:#2FBF71;}
@@ -447,12 +449,12 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .rf-pivot{background:#1a1a1a;border-radius:20px;padding:32px;margin-top:24px;}
 .cs-page .rf-pivot-l{font-size:16px;color:#FF9CD1;font-weight:700;margin-bottom:12px;}
 .cs-page .rf-pivot-t{font-size:20px;line-height:1.5;color:#f0ede8;max-width:760px;}
-.cs-page .rf-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px;}
+.cs-page .rf-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:24px;}
 .cs-page .rf-stat{background:#1a1a1a;border-radius:16px;padding:24px 20px;}
 .cs-page .rf-stat-n{font-family:'Inter',sans-serif;font-size:32px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px;}
 .cs-page .rf-stat-t{font-size:16px;color:#999;line-height:1.4;}
 @media(max-width:768px){
-.cs-page .rf-hyp{grid-template-columns:1fr;}
+.cs-page .rf-hyp,.cs-page .rf-hyp3{grid-template-columns:1fr;}
 .cs-page .rf-stats{grid-template-columns:1fr 1fr;}
 .cs-page .cs-ph{min-height:200px;padding:32px 20px;}
 }
@@ -1230,213 +1232,149 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   </div>
   <a href="https://t.me/zefirqa" class="cs-nav-tg">Написать в тг</a>
 </nav>
-<!-- CASE HERO -->
+<!-- 1. КОНТЕКСТ / HERO -->
 <div class="cs-hero">
   <div>
-    <div class="cs-label">Кейс 03 — 0→1 · Consumer · Research</div>
+    <div class="cs-label">Кейс 03 — 0→1 · Research · Consumer</div>
     <h1 class="cs-h1">Roofly</h1>
-    <p class="cs-desc"><strong>Roofly</strong> — мобильный сервис для&nbsp;жителей многоквартирных домов. Он&nbsp;достаёт важное из&nbsp;общего потока, помогает решать бытовые задачи и&nbsp;находить нужных соседей, не&nbsp;заставляя раскрывать личные данные.</p>
-    <p class="cs-desc"><strong>Начинала с&nbsp;идеи локальной соцсети.</strong> За&nbsp;2,5&nbsp;месяца провела продукт от&nbsp;исследования проблемы до&nbsp;MVP, интерактивного прототипа, лендинга и&nbsp;первого теста спроса.</p>
-    <p class="cs-desc"><strong>Делала одна, от&nbsp;первого интервью до&nbsp;рекламного теста.</strong> Ресёрч, продуктовые решения, дизайн, лендинг и&nbsp;проверку гипотезы на&nbsp;живых людях.</p>
+    <p class="cs-desc"><strong>Roofly</strong> — мобильное приложение для&nbsp;жителей многоквартирных домов: важное о&nbsp;доме отдельно от&nbsp;шума, бытовые задачи со&nbsp;статусом и&nbsp;безопасный контакт с&nbsp;соседями.</p>
+    <p class="cs-desc">Начинала с&nbsp;гипотезы соседской платформы для&nbsp;общения. 20&nbsp;интервью показали, что ещё одна соцсеть не&nbsp;нужна, и&nbsp;развернули продукт в&nbsp;утилитарный инструмент. Личный 0→1-проект во&nbsp;ВШЭ, 2,5&nbsp;месяца: от&nbsp;исследования до&nbsp;MVP, прототипа и&nbsp;теста спроса.</p>
     <div class="cs-meta">
-      <div><div class="cs-meta-label">Роль</div><div class="cs-meta-val">Автор продукта · дизайнер</div></div>
+      <div><div class="cs-meta-label">Роль</div><div class="cs-meta-val">Продуктовый дизайнер</div></div>
       <div><div class="cs-meta-label">Формат</div><div class="cs-meta-val">Личный 0→1, ВШЭ</div></div>
       <div><div class="cs-meta-label">Срок</div><div class="cs-meta-val">2,5&nbsp;месяца</div></div>
     </div>
   </div>
   <div class="cs-team">
-    <div class="cs-team-title">Сделала сама</div>
-    <div class="cs-team-row"><span class="cs-team-role">Исследование</span><span class="rf-check">✓</span></div>
-    <div class="cs-team-row"><span class="cs-team-role">Продуктовые гипотезы</span><span class="rf-check">✓</span></div>
-    <div class="cs-team-row"><span class="cs-team-role">MVP</span><span class="rf-check">✓</span></div>
-    <div class="cs-team-row"><span class="cs-team-role">Интерактивный прототип</span><span class="rf-check">✓</span></div>
-    <div class="cs-team-row"><span class="cs-team-role">Лендинг</span><span class="rf-check">✓</span></div>
-    <div class="cs-team-row"><span class="cs-team-role">Тест спроса</span><span class="rf-check">✓</span></div>
+    <div class="cs-team-title">Коротко</div>
+    <div class="cs-team-row"><span class="cs-team-role">Метод</span><span class="cs-team-n">20 интервью</span></div>
+    <div class="cs-team-row"><span class="cs-team-role">Прототип</span><span class="cs-team-n">интерактивный</span></div>
+    <div class="cs-team-row"><span class="cs-team-role">Лендинг</span><span class="cs-team-n">+ тест</span></div>
+    <div class="cs-team-row"><span class="cs-team-role">Конверсия</span><span class="cs-team-n">5,4%</span></div>
   </div>
 </div>
-<!-- RESEARCH -->
+<!-- 2. ПРОБЛЕМА -->
 <div class="cs-problem-outer">
+  <div class="cs-sec-label">Проблема</div>
+  <h2 class="cs-h2">Домовой чат стал главным инструментом соседей и&nbsp;плохо с&nbsp;этим справляется</h2>
+  <p class="cs-text" style="max-width:760px">В&nbsp;одном потоке вперемешку уведомления управляющей компании, бытовые просьбы, объявления и&nbsp;конфликты. Важное теряется, у&nbsp;запросов нет статуса, а&nbsp;написать незнакомому соседу неловко. Проблема не&nbsp;в&nbsp;нехватке общения, а&nbsp;в&nbsp;шуме и&nbsp;отсутствии структуры.</p>
+</div>
+<!-- 3-4. ГИПОТЕЗЫ + ИССЛЕДОВАНИЕ -->
+<div class="cs-problem-outer" style="padding-top:0">
   <div class="cs-problem-grid">
     <div class="cs-problem-col">
-      <div class="cs-sec-label">Исследование</div>
-      <h2 class="cs-h2">Домовой чат берётся за&nbsp;всё сразу и&nbsp;с&nbsp;каждой задачей справляется плохо</h2>
-      <p class="cs-text">В&nbsp;одном потоке живут объявления управляющей компании, бытовые просьбы, продажи, споры и&nbsp;болтовня. Важное тонет, у&nbsp;просьб нет статуса, а&nbsp;писать незнакомому соседу неловко.</p>
-      <p class="cs-text cs-text-mt">Я&nbsp;сомневалась, что&nbsp;жителям вообще нужен ещё один соседский сервис. Поэтому пошла это проверять, а&nbsp;не&nbsp;достраивать продукт на&nbsp;догадках.</p>
+      <div class="cs-sec-label">Гипотезы</div>
+      <p class="cs-text">Сформулировала три гипотезы и&nbsp;пошла проверять их на&nbsp;людях, а&nbsp;не&nbsp;достраивать продукт на&nbsp;догадках.</p>
+      <ul class="rf-list" style="margin-top:16px">
+        <li>важное теряется в&nbsp;шуме общего чата;</li>
+        <li>жителям нужен локальный контакт с&nbsp;соседями;</li>
+        <li>соседи готовы бесплатно помогать друг&nbsp;другу.</li>
+      </ul>
     </div>
-    <div class="cs-problem-col">
+    <div class="cs-problem-col" style="padding-top:0">
       <div class="rf-ask">
-        <div class="rf-ask-l">Проверяла на&nbsp;20&nbsp;интервью с&nbsp;жителями многоквартирных домов три исходные гипотезы:</div>
-        <ul class="rf-list">
-          <li>важное теряется в&nbsp;шуме;</li>
-          <li>людям нужен локальный контакт с&nbsp;соседями;</li>
-          <li>соседи готовы бесплатно помогать друг&nbsp;другу.</li>
-        </ul>
+        <div class="cs-sec-label">Исследование</div>
+        <div class="rf-num">20 интервью</div>
+        <p class="cs-text" style="margin-top:12px">Глубинные интервью с&nbsp;жителями многоквартирных домов. Ключевой вопрос: какую работу отдельный сервис должен делать лучше обычного домового чата. Спрашивала про&nbsp;реальные ситуации: как узнают о&nbsp;важном, как просят помощь и&nbsp;при&nbsp;каких условиях готовы контактировать.</p>
       </div>
     </div>
   </div>
-  <div class="rf-hyp">
+</div>
+<!-- 5. РЕЗУЛЬТАТЫ ИССЛЕДОВАНИЯ + ЭКРАНЫ -->
+<div class="cs-problem-outer" style="padding-top:0">
+  <div class="cs-sec-label">Результаты исследования</div>
+  <div class="rf-hyp3">
     <div class="rf-card">
       <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
-      <ul class="rf-list">
-        <li>Важное действительно теряется в&nbsp;шуме.</li>
-        <li>Локальный контакт нужен, но&nbsp;знакомиться проще с&nbsp;конкретной задачи, а&nbsp;не&nbsp;просто так.</li>
-      </ul>
+      <p class="cs-text" style="margin:0 0 12px">Важное теряется в&nbsp;шуме общего чата.</p>
+      <div class="rf-quote">«Районных новостей у&nbsp;нас нет. Хочется заранее знать про&nbsp;перекрытие улицы, а&nbsp;негде.»</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
+      <p class="cs-text" style="margin:0 0 12px">Контакт нужен, но&nbsp;начинать проще с&nbsp;конкретного дела, а&nbsp;не&nbsp;со&nbsp;знакомства.</p>
+      <div class="rf-quote">«Соседка несколько раз меня так выручала.»</div>
     </div>
     <div class="rf-card">
       <div class="rf-card-h"><span class="rf-dot rf-dot-no"></span>Не&nbsp;подтвердилось</div>
-      <ul class="rf-list">
-        <li>Массово и&nbsp;бесплатно помогать незнакомым соседям никто не&nbsp;рвётся: щедрость на&nbsp;практике оказалась редкой.</li>
-      </ul>
+      <p class="cs-text" style="margin:0 0 12px">Соседи готовы бесплатно помогать друг&nbsp;другу.</p>
+      <div class="rf-quote">«Дать инструмент, если надо, можно. Но&nbsp;просить просверлить за&nbsp;500&nbsp;рублей в&nbsp;день — уже вопрос.»</div>
     </div>
   </div>
   <div class="rf-pivot">
-    <div class="rf-pivot-l">Поворот продукта</div>
-    <div class="rf-pivot-t">После интервью я&nbsp;отказалась от&nbsp;соседской соцсети. Вместо общения ради общения собрала спокойный инструмент: важные уведомления, конкретные бытовые задачи и&nbsp;безопасный контакт.</div>
+    <div class="rf-pivot-l">Главный вывод</div>
+    <div class="rf-pivot-t">Соседям не&nbsp;нужна ещё одна соцсеть. Нужен утилитарный инструмент: важное отдельно от&nbsp;шума, задачи со&nbsp;статусом и&nbsp;обмен на&nbsp;понятных условиях. Идея развернулась от&nbsp;общения к&nbsp;пользе, и&nbsp;это определило все экраны ниже.</div>
   </div>
 </div>
-<!-- SCREENS -->
+<!-- SCREENS (4) -->
 <div class="cs-screens">
   <div class="cs-block">
     <div class="cs-ph">
       <div class="cs-ph-in">
         <span class="cs-ph-tag">Здесь экран</span>
-        <span class="cs-ph-txt">Экран «Объявления рядом» крупно. Рядом можно показать тематические чаты или настройку «Уведомлять только о&nbsp;важном».</span>
+        <span class="cs-ph-txt">Приоритетная лента: «Объявления рядом», виден источник и&nbsp;настройка «только важное».</span>
       </div>
     </div>
     <div class="cs-sticky">
       <div class="cs-num">01 — Приоритетная лента</div>
-      <h3 class="cs-h3">Отделила важное от&nbsp;общего шума, чтобы уведомления по&nbsp;дому не&nbsp;терялись в&nbsp;болтовне</h3>
-      <p class="cs-sdesc">Официальные и&nbsp;приоритетные сообщения дома и&nbsp;района отделены от&nbsp;пользовательского контента. Источник виден сразу, а&nbsp;житель может включить уведомления только по&nbsp;важному.</p>
-      <p class="cs-sdesc">Обсуждение никуда не&nbsp;делось: оно живёт в&nbsp;комментариях и&nbsp;не&nbsp;смешивается с&nbsp;самим уведомлением.</p>
-      <div class="cs-eff-label">Продуктовый эффект</div>
-      <ul class="cs-eff">
-        <li>критичное сообщение получает отдельный приоритет;</li>
-        <li>житель сам управляет уровнем шума;</li>
-        <li>новость об&nbsp;отключении или ремонте не&nbsp;тонет в&nbsp;общем чате.</li>
-      </ul>
-      <div class="cs-tags"><span class="cs-tag">MVP</span><span class="cs-tag">Feed</span><span class="cs-tag">Notifications</span></div>
+      <h3 class="cs-h3">Важное отделено от&nbsp;общего шума</h3>
+      <p class="cs-sdesc">Официальные сообщения дома и&nbsp;района отделены от&nbsp;болтовни: виден источник, уведомления можно оставить только по&nbsp;важному. Обсуждение уходит в&nbsp;комментарии и&nbsp;не&nbsp;мешает самому сообщению.</p>
+      <div class="cs-tags"><span class="cs-tag">Feed</span><span class="cs-tag">Notifications</span></div>
     </div>
   </div>
   <div class="cs-block">
     <div class="cs-ph">
       <div class="cs-ph-in">
         <span class="cs-ph-tag">Здесь экран</span>
-        <span class="cs-ph-txt">Список заявок со&nbsp;статусами и&nbsp;экран создания заявки либо каталог запросов.</span>
+        <span class="cs-ph-txt">Список заявок со&nbsp;статусами и&nbsp;экран создания запроса.</span>
       </div>
     </div>
     <div class="cs-sticky">
-      <div class="cs-num">02 — Структурированные запросы</div>
-      <h3 class="cs-h3">Превратила просьбу в&nbsp;задачу со&nbsp;статусом, у&nbsp;которой есть начало и&nbsp;конец</h3>
-      <p class="cs-sdesc">Вместо свободного сообщения в&nbsp;чате житель создаёт запрос с&nbsp;понятным типом, зоной видимости и&nbsp;статусом.</p>
-      <p class="cs-sdesc">Автор видит, взяли задачу в&nbsp;работу или уже закрыли. Запрос не&nbsp;растворяется в&nbsp;переписке, у&nbsp;сценария появляются старт и&nbsp;финал.</p>
-      <div class="cs-eff-label">Продуктовый эффект</div>
-      <ul class="cs-eff">
-        <li>запрос можно найти и&nbsp;отследить;</li>
-        <li>участникам понятны контекст и&nbsp;текущий статус;</li>
-        <li>бытовая задача не&nbsp;превращается в&nbsp;бесконечное обсуждение.</li>
-      </ul>
-      <div class="cs-tags"><span class="cs-tag">MVP</span><span class="cs-tag">Requests</span><span class="cs-tag">Statuses</span></div>
+      <div class="cs-num">02 — Запрос со&nbsp;статусом</div>
+      <h3 class="cs-h3">Просьба превращается в&nbsp;задачу с&nbsp;началом и&nbsp;концом</h3>
+      <p class="cs-sdesc">Вместо сообщения в&nbsp;чате житель создаёт запрос с&nbsp;типом, зоной видимости и&nbsp;статусом. Видно, взяли задачу в&nbsp;работу или уже закрыли, и&nbsp;она не&nbsp;тонет в&nbsp;переписке.</p>
+      <div class="cs-tags"><span class="cs-tag">Requests</span><span class="cs-tag">Statuses</span></div>
     </div>
   </div>
   <div class="cs-block">
     <div class="cs-ph">
       <div class="cs-ph-in">
         <span class="cs-ph-tag">Здесь экран</span>
-        <span class="cs-ph-txt">Экран «Соседи». На&nbsp;карточках должны хорошо читаться навыки и&nbsp;причины для&nbsp;контакта.</span>
+        <span class="cs-ph-txt">Экран «Соседи»: карточки с&nbsp;навыками и&nbsp;причиной для&nbsp;контакта, профиль с&nbsp;настройкой видимости квартиры.</span>
       </div>
     </div>
     <div class="cs-sticky">
-      <div class="cs-num">03 — Поиск релевантного соседа</div>
-      <h3 class="cs-h3">Сделала так, что&nbsp;сосед находится под&nbsp;конкретную задачу, а&nbsp;не&nbsp;через навязанное знакомство</h3>
-      <p class="cs-sdesc">Каталог собран не&nbsp;как соцлента, а&nbsp;как поиск человека под&nbsp;ситуацию. Искать можно по&nbsp;дому и&nbsp;району, интересам, навыкам и&nbsp;отметке «чем могу помочь».</p>
-      <p class="cs-sdesc">Так падает барьер первого контакта: не&nbsp;нужно набиваться в&nbsp;друзья к&nbsp;незнакомому человеку без&nbsp;повода.</p>
-      <div class="cs-eff-label">Продуктовый эффект</div>
-      <ul class="cs-eff">
-        <li>человек находится по&nbsp;задаче или общему интересу;</li>
-        <li>локальный контекст виден ещё до&nbsp;контакта;</li>
-        <li>продукт не&nbsp;превращается в&nbsp;соседский дейтинг.</li>
-      </ul>
-      <div class="cs-tags"><span class="cs-tag">MVP</span><span class="cs-tag">Discovery</span><span class="cs-tag">Local relevance</span></div>
+      <div class="cs-num">03 — Поиск соседа под&nbsp;задачу</div>
+      <h3 class="cs-h3">Контакт начинается с&nbsp;причины, а&nbsp;не&nbsp;со&nbsp;знакомства</h3>
+      <p class="cs-sdesc">Интервью показали: знакомиться проще под&nbsp;конкретную ситуацию. Поэтому соседи ищутся по&nbsp;дому, интересам и&nbsp;навыкам, а&nbsp;профиль показывает только нужное для&nbsp;решения. Номер квартиры и&nbsp;телефон можно скрыть.</p>
+      <div class="cs-tags"><span class="cs-tag">Discovery</span><span class="cs-tag">Privacy</span></div>
     </div>
   </div>
   <div class="cs-block">
     <div class="cs-ph">
       <div class="cs-ph-in">
         <span class="cs-ph-tag">Здесь экран</span>
-        <span class="cs-ph-txt">Экран профиля с&nbsp;настройкой видимости квартиры. Можно добавить фрагмент безопасного первого сообщения.</span>
+        <span class="cs-ph-txt">Каталог аренды и&nbsp;обмена. Развитие продукта после проверки основных сценариев.</span>
       </div>
     </div>
     <div class="cs-sticky">
-      <div class="cs-num">04 — Доверие и&nbsp;приватность</div>
-      <h3 class="cs-h3">Дала человеку решать, что&nbsp;о&nbsp;себе показывать, ещё до&nbsp;первого сообщения</h3>
-      <p class="cs-sdesc">Профиль показывает только то, что&nbsp;нужно для&nbsp;решения: дом, район, интересы, навыки и&nbsp;возможную помощь.</p>
-      <p class="cs-sdesc">Номер квартиры и&nbsp;телефон можно скрыть. Первый контакт идёт внутри сервиса, без&nbsp;обязательного раскрытия личных данных.</p>
-      <div class="cs-eff-label">Продуктовый эффект</div>
-      <ul class="cs-eff">
-        <li>доверие складывается ещё до&nbsp;личного контакта;</li>
-        <li>человек сохраняет контроль над&nbsp;приватностью;</li>
-        <li>общаться могут даже незнакомые соседи.</li>
-      </ul>
-      <div class="cs-tags"><span class="cs-tag">MVP</span><span class="cs-tag">Privacy</span><span class="cs-tag">Trust</span></div>
-    </div>
-  </div>
-  <div class="cs-block">
-    <div class="cs-ph">
-      <div class="cs-ph-in">
-        <span class="cs-ph-tag">Здесь экран</span>
-        <span class="cs-ph-txt">Каталог аренды. Показать как развитие продукта после проверки основных сценариев, не&nbsp;как ядро MVP.</span>
-      </div>
-    </div>
-    <div class="cs-sticky">
-      <div class="cs-scope">Развитие продукта</div>
-      <div class="cs-num">05 — Обмен вместо абстрактной помощи</div>
-      <h3 class="cs-h3">Развернула механику под&nbsp;гипотезу, которая не&nbsp;подтвердилась: не&nbsp;обещание помощи, а&nbsp;понятные условия</h3>
-      <p class="cs-sdesc">Исследование показало: рассчитывать на&nbsp;массовую бесплатную взаимопомощь наивно. Людям проще договариваться, когда условия понятны заранее.</p>
-      <p class="cs-sdesc">Поэтому в&nbsp;продукте появились аренда, обмен и&nbsp;честно указанная стоимость вместо общего обещания «соседи помогут».</p>
-      <div class="cs-eff-label">Продуктовый эффект</div>
-      <ul class="cs-eff">
-        <li>у&nbsp;взаимодействия появляются прозрачные условия;</li>
-        <li>уходит социальная неловкость;</li>
-        <li>ценность возникает для&nbsp;обеих сторон.</li>
-      </ul>
-      <div class="cs-tags"><span class="cs-tag">Next scope</span><span class="cs-tag">Exchange</span><span class="cs-tag">Rental</span></div>
-    </div>
-  </div>
-  <div class="cs-block">
-    <div class="cs-ph">
-      <div class="cs-ph-in">
-        <span class="cs-ph-tag">Здесь экран</span>
-        <span class="cs-ph-txt">Экран списка чатов. Рядом можно показать комментарии под&nbsp;объявлением.</span>
-      </div>
-    </div>
-    <div class="cs-sticky">
-      <div class="cs-scope">Развитие продукта</div>
-      <div class="cs-num">06 — Чаты вынесены из&nbsp;ядра</div>
-      <h3 class="cs-h3">Убрала общение из&nbsp;операционного слоя, чтобы шум не&nbsp;управлял всем продуктом</h3>
-      <p class="cs-sdesc">Тематические группы и&nbsp;комментарии отделены от&nbsp;важных уведомлений и&nbsp;бытовых запросов.</p>
-      <p class="cs-sdesc">В&nbsp;чат по&nbsp;интересу можно вступить, но&nbsp;критичная информация и&nbsp;задачи дома не&nbsp;зависят от&nbsp;активности сообщества.</p>
-      <div class="cs-eff-label">Продуктовый эффект</div>
-      <ul class="cs-eff">
-        <li>шум не&nbsp;пачкает основные сценарии;</li>
-        <li>группы становятся осознанным выбором;</li>
-        <li>продукт полезен даже без&nbsp;активного общения.</li>
-      </ul>
-      <div class="cs-tags"><span class="cs-tag">Next scope</span><span class="cs-tag">Groups</span><span class="cs-tag">Comments</span></div>
+      <div class="cs-num">04 — Обмен на&nbsp;понятных условиях</div>
+      <h3 class="cs-h3">Не&nbsp;обещание помощи, а&nbsp;прозрачные условия</h3>
+      <p class="cs-sdesc">Гипотеза про&nbsp;бесплатную взаимопомощь не&nbsp;подтвердилась, поэтому вместо «соседи помогут» появились аренда, обмен и&nbsp;честная стоимость. У&nbsp;взаимодействия есть понятные условия, а&nbsp;у&nbsp;обеих сторон выгода.</p>
+      <div class="cs-tags"><span class="cs-tag">Exchange</span><span class="cs-tag">Rental</span></div>
     </div>
   </div></div><!-- /cs-screens -->
-<!-- RESULTS -->
+<!-- 6. ПРОВЕРКА СПРОСА + ОБЩИЕ РЕЗУЛЬТАТЫ -->
 <div class="cs-results-outer">
-  <div class="cs-results-lbl">Проверка спроса</div>
-  <h2 class="cs-h2">Поменяла продуктовую гипотезу до&nbsp;того, как в&nbsp;разработку ушёл хоть рубль</h2>
-  <p class="cs-sdesc">Собрала лендинг с&nbsp;новым позиционированием: важное о&nbsp;доме без&nbsp;шума и&nbsp;бытовая помощь рядом. Запустила небольшой рекламный тест.</p>
+  <div class="cs-results-lbl">Проверка спроса и&nbsp;результаты</div>
+  <h2 class="cs-h2">Проверила спрос до&nbsp;разработки</h2>
+  <p class="cs-sdesc">Собрала лендинг с&nbsp;новым позиционированием, «важное о&nbsp;доме без&nbsp;шума и&nbsp;бытовая помощь рядом», и&nbsp;запустила небольшой рекламный тест.</p>
   <div class="rf-stats">
-    <div class="rf-stat"><div class="rf-stat-n">20</div><div class="rf-stat-t">интервью в&nbsp;исследовании</div></div>
-    <div class="rf-stat"><div class="rf-stat-n">1</div><div class="rf-stat-t">исходная гипотеза отклонена</div></div>
-    <div class="rf-stat"><div class="rf-stat-n">92</div><div class="rf-stat-t">уникальных визита на&nbsp;лендинг</div></div>
-    <div class="rf-stat"><div class="rf-stat-n">5</div><div class="rf-stat-t">заявок на&nbsp;ранний доступ</div></div>
+    <div class="rf-stat"><div class="rf-stat-n">20</div><div class="rf-stat-t">глубинных интервью</div></div>
+    <div class="rf-stat"><div class="rf-stat-n">92</div><div class="rf-stat-t">визита на&nbsp;лендинг</div></div>
+    <div class="rf-stat"><div class="rf-stat-n">5</div><div class="rf-stat-t">заявки на&nbsp;ранний доступ</div></div>
     <div class="rf-stat"><div class="rf-stat-n">5,4%</div><div class="rf-stat-t">конверсия визита в&nbsp;заявку</div></div>
   </div>
-  <p class="cs-res-note">Проблема считывается аудиторией и&nbsp;доводит до&nbsp;целевого действия. Но&nbsp;выборка маленькая: для&nbsp;вывода о&nbsp;product-market fit её недостаточно, дальше нужен объём.</p>
+  <p class="cs-res-note">Проблема считывается аудиторией и&nbsp;доводит до&nbsp;целевого действия. Выборка маленькая, о&nbsp;product-market fit говорить рано, но&nbsp;гипотеза оправдала следующий шаг.</p>
 </div>
 <!-- CASE FOOTER -->
 <div class="cs-contacts-section">
