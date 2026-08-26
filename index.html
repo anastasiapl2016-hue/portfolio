@@ -433,10 +433,11 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .rf-clab{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;color:#D6006E;margin:0 0 12px;display:block;}
 .cs-page .rf-prob{color:#1a1a1a;font-weight:400;}
 .cs-page .rf-clab::before,.cs-page .rf-kicker::before,.cs-page .rf-pivot-l::before{content:"/ ";}
-.cs-page .cs-metarow{display:grid;grid-template-columns:repeat(4,1fr);gap:24px 32px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(0,0,0,0.10);max-width:900px;}
+.cs-page .cs-metarow{display:flex;flex-wrap:wrap;gap:20px 48px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(0,0,0,0.10);}
+.cs-page .cs-metarow>div{flex:0 1 auto;max-width:220px;}
 .cs-page .cs-metarow .k{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:13px;letter-spacing:.01em;color:#8a8a8a;margin-bottom:8px;}
 .cs-page .cs-metarow .v{font-size:16px;font-weight:600;color:#1a1a1a;line-height:1.35;}
-@media(max-width:768px){.cs-page .cs-metarow{grid-template-columns:1fr 1fr;gap:20px;}}
+@media(max-width:768px){.cs-page .cs-metarow{gap:20px 32px;}.cs-page .cs-metarow>div{flex:0 0 calc(50% - 16px);max-width:none;}}
 .cs-page .rf-hook{padding:56px 56px 0;}
 .cs-page .rf-hook-in{background:#1a1a1a;border-radius:20px;padding:44px;}
 .cs-page .rf-hook-t{font-size:24px;font-weight:700;color:#f0ede8;line-height:1.3;margin:0 0 24px;max-width:600px;}
