@@ -441,6 +441,11 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .cs-ph-in{max-width:440px;display:flex;flex-direction:column;align-items:center;gap:12px;}
 .cs-page .cs-ph-tag{font-size:14px;font-weight:700;letter-spacing:0.01em;color:#9a9a9a;}
 .cs-page .cs-ph-txt{font-size:16px;color:#8a8a8a;line-height:1.5;}
+.cs-page .cs-block-wide{display:block;}
+.cs-page .cs-block-wide .cs-sticky{position:static;max-width:720px;margin-bottom:32px;}
+.cs-page .rf-triptych{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start;}
+.cs-page .rf-shot{display:flex;flex-direction:column;gap:12px;}
+.cs-page .rf-shot-cap{font-size:14px;color:#8a8a8a;line-height:1.4;text-align:center;}
 .cs-page .rf-hyp{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
 .cs-page .rf-card{background:#EFEFEF;border-radius:16px;padding:24px;}
 .cs-page .rf-card .cs-text,.cs-page .rf-ins .cs-text,.cs-page .rf-card .rf-list li{color:#1a1a1a;}
@@ -464,6 +469,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .rf-stat-n{font-family:'Inter',sans-serif;font-size:32px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px;}
 .cs-page .rf-stat-t{font-size:16px;color:#999;line-height:1.4;}
 @media(max-width:768px){
+.cs-page .rf-triptych{grid-template-columns:1fr;gap:32px;max-width:360px;margin:0 auto;}
 .cs-page .rf-hyp,.cs-page .rf-hyp3{grid-template-columns:1fr;row-gap:24px;}
 .cs-page .rf-stats{grid-template-columns:1fr 1fr;}
 .cs-page .cs-ph{min-height:200px;padding:32px 20px;}
@@ -1290,18 +1296,26 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 <!-- SOLUTIONS -->
 <div class="cs-screens">
   <div style="padding:0 0 8px"><span class="rf-clab">Решения</span></div>
-  <div class="cs-block">
-    <div class="cs-ph">
-      <div class="cs-ph-in">
-        <span class="cs-ph-tag">Здесь экран</span>
-        <span class="cs-ph-txt">Экран «Объявления рядом» с&nbsp;фильтром «Важное» и&nbsp;постом от&nbsp;администрации района.</span>
-      </div>
-    </div>
+  <div class="cs-block cs-block-wide">
     <div class="cs-sticky">
       <div class="cs-num">01 — Приоритетная лента</div>
-      <h3 class="cs-h3">Важное отделено от&nbsp;общего шума</h3>
-      <p class="cs-sdesc">Пометку «Важное» ставит только управляющая компания, а&nbsp;житель может включить уведомления только по&nbsp;важному. Спам и&nbsp;обсуждения уходят в&nbsp;комментарии под&nbsp;постом и&nbsp;не&nbsp;мешают самому сообщению.</p>
-      <div class="cs-tags"><span class="cs-tag">Feed</span><span class="cs-tag">Notifications</span></div>
+      <h3 class="cs-h3">Важное вверху, а&nbsp;профиль мотивирует участвовать</h3>
+      <p class="cs-sdesc">Пометку «Важное» ставит только управляющая компания, поэтому объявления о&nbsp;доме не&nbsp;тонут в&nbsp;болтовне, а&nbsp;спам и&nbsp;обсуждения уходят в&nbsp;комментарии под&nbsp;постом. Чтобы писать в&nbsp;ленту, житель заполняет профиль, и&nbsp;я&nbsp;сделала это мягким онбордингом: соседи сразу видят, чем человек может помочь.</p>
+      <div class="cs-tags"><span class="cs-tag">Feed</span><span class="cs-tag">Onboarding</span><span class="cs-tag">Profile</span></div>
+    </div>
+    <div class="rf-triptych">
+      <div class="rf-shot">
+        <div class="cs-img"><img src="assets/roofly-feed.webp" onclick="openCsModal(this)" alt="Лента «Рядом со мной»" loading="lazy"></div>
+        <div class="rf-shot-cap">Лента: важное вверху, спам под&nbsp;постом</div>
+      </div>
+      <div class="rf-shot">
+        <div class="cs-img"><img src="assets/roofly-profile-empty.webp" onclick="openCsModal(this)" alt="Пустой профиль" loading="lazy"></div>
+        <div class="rf-shot-cap">Пустой профиль подсказывает заполнить его</div>
+      </div>
+      <div class="rf-shot">
+        <div class="cs-img"><img src="assets/roofly-profile-full.webp" onclick="openCsModal(this)" alt="Заполненный профиль" loading="lazy"></div>
+        <div class="rf-shot-cap">Заполненный: видно, чем сосед может помочь</div>
+      </div>
     </div>
   </div>
   <div class="cs-block">
