@@ -445,6 +445,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .cs-ph-txt{font-size:16px;color:#8a8a8a;line-height:1.5;}
 .cs-page .rf-triptych{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:start;}
 .cs-page .rf-triptych img{width:100%;height:auto;display:block;cursor:zoom-in;}
+.cs-page .rf-triptych video{width:100%;height:auto;display:block;}
 .cs-page .rf-hyp{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
 .cs-page .rf-card{background:#EFEFEF;border-radius:16px;padding:24px;}
 .cs-page .rf-card .cs-text,.cs-page .rf-ins .cs-text,.cs-page .rf-card .rf-list li{color:#1a1a1a;}
@@ -1298,8 +1299,8 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   <div class="cs-block">
     <div class="rf-triptych">
       <img src="assets/roofly-onb-welcome.webp" onclick="openCsModal(this)" alt="Знакомство с Roofly" loading="lazy">
-      <img src="assets/roofly-onb-location.webp" onclick="openCsModal(this)" alt="Укажите адрес" loading="lazy">
-      <img src="assets/roofly-onb-notify.webp" onclick="openCsModal(this)" alt="Включить уведомления" loading="lazy">
+      <video src="assets/roofly-onb-location.mp4" autoplay muted loop playsinline aria-label="Укажите адрес"></video>
+      <video src="assets/roofly-onb-notify.mp4" autoplay muted loop playsinline aria-label="Включить уведомления"></video>
     </div>
     <div class="cs-sticky">
       <div class="cs-num">01 — Онбординг</div>
@@ -1310,7 +1311,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   </div>
   <div class="cs-block">
     <div class="rf-triptych">
-      <img src="assets/roofly-feed.webp" onclick="openCsModal(this)" alt="Лента «Рядом со мной»" loading="lazy">
+      <video src="assets/roofly-feed.mp4" autoplay muted loop playsinline aria-label="Лента «Рядом со мной»"></video>
       <img src="assets/roofly-auth-phone.webp" onclick="openCsModal(this)" alt="Вход по номеру телефона" loading="lazy">
       <img src="assets/roofly-auth-profile.webp" onclick="openCsModal(this)" alt="Заполнение профиля" loading="lazy">
     </div>
@@ -1323,7 +1324,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   </div>
   <div class="cs-block">
     <div class="rf-triptych">
-      <img src="assets/roofly-feed2.webp" onclick="openCsModal(this)" alt="Лента «Рядом со мной»" loading="lazy">
+      <video src="assets/roofly-feed2.mp4" autoplay muted loop playsinline aria-label="Лента «Рядом со мной»"></video>
       <img src="assets/roofly-post-empty.webp" onclick="openCsModal(this)" alt="Создание публикации" loading="lazy">
       <img src="assets/roofly-post-full.webp" onclick="openCsModal(this)" alt="Готовый пост" loading="lazy">
     </div>
@@ -1572,5 +1573,16 @@ document.addEventListener('keydown',function(e){
     <img src="assets/karma-thanks.webp" alt="Благодарности от команды">
   </div>
 </div>
+<script>
+(function(){
+  var vids=document.querySelectorAll('.rf-triptych video');
+  if(!vids.length) return;
+  function play(v){var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?play(e.target):e.target.pause();});},{threshold:0.15});
+    vids.forEach(function(v){io.observe(v);});
+  } else { vids.forEach(play); }
+})();
+</script>
 </body>
 </html>

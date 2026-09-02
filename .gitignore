@@ -4,3 +4,4 @@
 venv/
 bake_phone.py
 bake_all.py
+encode_video.py
