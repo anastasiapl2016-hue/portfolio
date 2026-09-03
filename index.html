@@ -424,21 +424,23 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .sdot{width:8px;height:8px;border-radius:50%;background:#D0D0D0;}
 .sdot.on{background:#FF9CD1;}
 /* ── ROOFLY (case-page-3) ── */
-#case-page-3 .cs-hero{grid-template-columns:minmax(0,1fr) 460px;gap:48px;align-items:start;}
+#case-page-3 .cs-hero{grid-template-columns:minmax(0,1fr) 640px;gap:40px;align-items:start;}
 #case-page-3 .cs-hero>div{max-width:760px;}
-#case-page-3 .cs-hero-visual{max-width:none;position:relative;width:100%;height:400px;}
-#case-page-3 .cs-phone{position:absolute;width:66%;height:auto;will-change:transform;}
-#case-page-3 .cs-phone-a{left:0;top:36px;z-index:2;animation:rfFloatA 12s ease-in-out infinite;}
-#case-page-3 .cs-phone-b{right:0;top:120px;z-index:1;animation:rfFloatB 12s ease-in-out infinite;}
-@keyframes rfFloatA{0%,100%{transform:translate(0,0) rotate(-8deg);}50%{transform:translate(-7px,-9px) rotate(-9deg);}}
-@keyframes rfFloatB{0%,100%{transform:translate(0,0) rotate(7deg);}50%{transform:translate(7px,9px) rotate(8deg);}}
+#case-page-3 .cs-hero-visual{max-width:none;position:relative;width:100%;height:480px;}
+#case-page-3 .cs-phone{position:absolute;height:480px;width:auto;will-change:transform;}
+#case-page-3 .cs-phone-a{left:0;top:0;z-index:2;animation:rfFloatA 12s ease-in-out infinite;}
+#case-page-3 .cs-phone-b{right:0;top:175px;z-index:1;animation:rfFloatB 12s ease-in-out infinite;}
+@keyframes rfFloatA{0%,100%{transform:translate(0,0);}50%{transform:translate(-6px,-9px);}}
+@keyframes rfFloatB{0%,100%{transform:translate(0,0);}50%{transform:translate(6px,9px);}}
 @media (prefers-reduced-motion:reduce){#case-page-3 .cs-phone{animation:none;}}
-@media(max-width:1000px){
+@media(max-width:1150px){
   #case-page-3 .cs-hero{grid-template-columns:1fr;gap:0;}
-  #case-page-3 .cs-hero-visual{margin-top:24px;height:560px;justify-self:start;max-width:460px;}
+  #case-page-3 .cs-hero-visual{margin-top:20px;height:670px;justify-self:start;max-width:640px;}
 }
 @media(max-width:768px){
-  #case-page-3 .cs-hero-visual{margin-top:12px;height:430px;justify-self:center;max-width:320px;overflow-x:clip;}
+  #case-page-3 .cs-hero-visual{margin-top:8px;height:450px;justify-self:center;max-width:340px;overflow-x:clip;}
+  #case-page-3 .cs-phone{height:330px;}
+  #case-page-3 .cs-phone-b{top:110px;}
 }
 #case-page .cs-h1,#case-page-2 .cs-h1,#case-page-3 .cs-h1{max-width:760px;}
 .cs-page .rf-kicker{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;color:#D6006E;margin-bottom:20px;}
