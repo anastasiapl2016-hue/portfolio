@@ -430,8 +430,8 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 #case-page-3 .cs-phone{position:absolute;height:480px;width:auto;will-change:transform;}
 #case-page-3 .cs-phone-a{left:0;top:0;z-index:2;animation:rfFloatA 9s ease-in-out infinite;}
 #case-page-3 .cs-phone-b{right:0;top:175px;z-index:1;animation:rfFloatB 9s ease-in-out infinite;}
-@keyframes rfFloatA{0%{transform:translate(0,0);}30%{transform:translate(-9px,-11px);}60%{transform:translate(17px,8px);}82%{transform:translate(-4px,-3px);}100%{transform:translate(0,0);}}
-@keyframes rfFloatB{0%{transform:translate(0,0);}30%{transform:translate(9px,11px);}60%{transform:translate(-17px,-8px);}82%{transform:translate(4px,3px);}100%{transform:translate(0,0);}}
+@keyframes rfFloatA{0%,100%{transform:translate(15px,6px);}50%{transform:translate(-5px,-6px);}}
+@keyframes rfFloatB{0%,100%{transform:translate(-15px,-6px);}50%{transform:translate(5px,6px);}}
 @media (prefers-reduced-motion:reduce){#case-page-3 .cs-phone{animation:none;}}
 @media(max-width:1150px){
   #case-page-3 .cs-hero{grid-template-columns:1fr;gap:0;}
@@ -1141,7 +1141,8 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 
 <!-- BEFORE / AFTER: Карточка резерва -->
 <div class="cs-ba">
-  <div class="rf-clab">Карточка резерва</div>
+  <div class="rf-clab">Редизайн</div>
+  <div class="cs-num">01 — Карточка резерва</div>
   <h2 class="cs-h2">Сократила путь менеджера в карточке резерва без пересборки бэкенда</h2>
   <p class="cs-ba-lead">Ключевые данные и ежедневные действия собрала на одном экране, а редкие функции убрала из основного сценария.</p>
 
@@ -1174,7 +1175,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 <hr class="cs-ba-sep">
 <!-- BEFORE / AFTER: Поиск товара -->
 <div class="cs-ba" style="padding-top:76px">
-  <div class="rf-clab">Поиск товара</div>
+  <div class="cs-num">02 — Поиск товара</div>
   <h2 class="cs-h2">Перестроила поиск товаров: склад стал фильтром, а не точкой входа</h2>
   <p class="cs-ba-lead">Раньше поиск начинался с пустого экрана и обязательного выбора склада. Я развернула сценарий вокруг товара: продавец сразу ищет позицию и видит всё для решения прямо в выдаче.</p>
 
@@ -1207,7 +1208,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 <hr class="cs-ba-sep">
 <!-- BEFORE / AFTER: Главная -->
 <div class="cs-ba" style="padding-top:76px">
-  <div class="rf-clab">Главная</div>
+  <div class="cs-num">03 — Главная</div>
   <h2 class="cs-h2">Превратила пустую главную в ролевую точку входа</h2>
   <p class="cs-ba-lead">Вместо экрана без содержания пользователь сразу видит доступные ему рабочие сценарии и понимает, с чего начать.</p>
 
