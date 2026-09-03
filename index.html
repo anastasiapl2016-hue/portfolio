@@ -423,26 +423,26 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .sdots{display:flex;gap:6px;align-items:center;flex-shrink:0;}
 .sdot{width:8px;height:8px;border-radius:50%;background:#D0D0D0;}
 .sdot.on{background:#FF9CD1;}
-/* ── ROOFLY (case-page-3) ── */
-#case-page-3 .cs-hero{grid-template-columns:minmax(0,1fr) 640px;gap:40px;align-items:start;}
-#case-page-3 .cs-hero>div{max-width:760px;}
-#case-page-3 .cs-hero-visual{max-width:none;position:relative;width:100%;height:360px;}
-#case-page-3 .cs-phone{position:absolute;height:480px;width:auto;will-change:transform;}
-#case-page-3 .cs-phone-a{left:0;top:0;z-index:2;animation:rfFloatA 10s ease-in-out infinite;}
-#case-page-3 .cs-phone-b{right:0;top:175px;z-index:1;animation:rfFloatB 10s ease-in-out infinite;}
+/* ── ROOFLY (case-page-3) + ЧД (case-page-4) ── */
+#case-page-3 .cs-hero,#case-page-4 .cs-hero{grid-template-columns:minmax(0,1fr) 640px;gap:40px;align-items:start;}
+#case-page-3 .cs-hero>div,#case-page-4 .cs-hero>div{max-width:760px;}
+#case-page-3 .cs-hero-visual,#case-page-4 .cs-hero-visual{max-width:none;position:relative;width:100%;height:360px;}
+#case-page-3 .cs-phone,#case-page-4 .cs-phone{position:absolute;height:480px;width:auto;will-change:transform;}
+#case-page-3 .cs-phone-a,#case-page-4 .cs-phone-a{left:0;top:0;z-index:2;animation:rfFloatA 10s ease-in-out infinite;}
+#case-page-3 .cs-phone-b,#case-page-4 .cs-phone-b{right:0;top:175px;z-index:1;animation:rfFloatB 10s ease-in-out infinite;}
 @keyframes rfFloatA{0%{transform:translate(-16px,-2px);}22%,72%{transform:translate(22px,8px);}100%{transform:translate(-16px,-2px);}}
 @keyframes rfFloatB{0%{transform:translate(16px,2px);}22%,72%{transform:translate(-22px,-8px);}100%{transform:translate(16px,2px);}}
-@media (prefers-reduced-motion:reduce){#case-page-3 .cs-phone{animation:none;}}
+@media (prefers-reduced-motion:reduce){#case-page-3 .cs-phone,#case-page-4 .cs-phone{animation:none;}}
 @media(max-width:1150px){
-  #case-page-3 .cs-hero{grid-template-columns:1fr;gap:0;}
-  #case-page-3 .cs-hero-visual{margin-top:20px;height:670px;justify-self:start;max-width:640px;}
+  #case-page-3 .cs-hero,#case-page-4 .cs-hero{grid-template-columns:1fr;gap:0;}
+  #case-page-3 .cs-hero-visual,#case-page-4 .cs-hero-visual{margin-top:20px;height:670px;justify-self:start;max-width:640px;}
 }
 @media(max-width:768px){
-  #case-page-3 .cs-hero-visual{margin-top:8px;height:450px;justify-self:center;max-width:340px;overflow-x:clip;}
-  #case-page-3 .cs-phone{height:330px;}
-  #case-page-3 .cs-phone-b{top:110px;}
+  #case-page-3 .cs-hero-visual,#case-page-4 .cs-hero-visual{margin-top:8px;height:450px;justify-self:center;max-width:340px;overflow-x:clip;}
+  #case-page-3 .cs-phone,#case-page-4 .cs-phone{height:330px;}
+  #case-page-3 .cs-phone-b,#case-page-4 .cs-phone-b{top:110px;}
 }
-#case-page .cs-h1,#case-page-2 .cs-h1,#case-page-3 .cs-h1{max-width:760px;}
+#case-page .cs-h1,#case-page-2 .cs-h1,#case-page-3 .cs-h1,#case-page-4 .cs-h1{max-width:760px;}
 .cs-page .rf-kicker{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;color:#D6006E;margin-bottom:20px;}
 .cs-page .rf-clab{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;color:#D6006E;margin:0 0 12px;display:block;}
 .cs-page .rf-prob{color:#1a1a1a;font-weight:400;}
@@ -470,7 +470,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 @media(max-width:768px){.cs-page .rf-demand{grid-template-columns:1fr;gap:28px;}.cs-page .rf-demand-media{margin-top:0;}.rf-sl-arrow{width:44px;height:44px;font-size:24px;}.rf-sl-prev{left:8px;}.rf-sl-next{right:8px;}#rf-sl-img{max-width:96vw;}}
 .cs-page .cs-metarow{display:flex;flex-wrap:wrap;gap:20px 48px;margin-top:32px;}
 .cs-page .cs-metarow>div{flex:0 1 auto;max-width:220px;}
-#case-page-3 .cs-metarow>div:nth-child(2){max-width:none;}
+#case-page-3 .cs-metarow>div:nth-child(2),#case-page-4 .cs-metarow>div:nth-child(2){max-width:none;}
 .cs-page .cs-metarow .k{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:14px;letter-spacing:.01em;color:#8a8a8a;margin-bottom:8px;}
 .cs-page .cs-metarow .v{font-size:16px;font-weight:600;color:#1a1a1a;line-height:1.35;}
 @media(max-width:768px){.cs-page .cs-metarow{gap:20px 32px;}.cs-page .cs-metarow>div{flex:0 0 calc(50% - 16px);max-width:none;}}
@@ -484,7 +484,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .rf-hyp{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
 .cs-page .rf-card{background:#EFEFEF;border-radius:16px;padding:24px;}
 .cs-page .rf-card .cs-text,.cs-page .rf-ins .cs-text,.cs-page .rf-card .rf-list li{color:#1a1a1a;}
-#case-page-3 .cs-text,#case-page-3 .cs-sdesc,#case-page-3 .rf-list li,#case-page-3 .rf-quote{line-height:1.6;}
+#case-page-3 .cs-text,#case-page-3 .cs-sdesc,#case-page-3 .rf-list li,#case-page-3 .rf-quote,#case-page-4 .cs-text,#case-page-4 .cs-sdesc,#case-page-4 .rf-list li,#case-page-4 .rf-quote{line-height:1.6;}
 .cs-page .rf-hyp3{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px;align-items:start;}
 .cs-page .rf-ins{display:flex;flex-direction:column;gap:8px;}
 .cs-page .rf-ins .rf-quote{margin-top:12px;}
@@ -633,11 +633,11 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
         </div>
       </div>
     </a>
-    <a class="case-card" href="#">
-      <div class="case-thumb"><div class="case-thumb-ph">Скоро</div></div>
+    <a class="case-card" href="#" onclick="showPage('case-page-4');return false;">
+      <div class="case-thumb"><div class="case-thumb-ph">Что делаем?</div></div>
       <div class="case-body">
         <div class="case-name">Что делаем?</div>
-        <div class="case-desc">Сервис совместного планирования досуга — от идеи до запуска с первыми пользователями</div>
+        <div class="case-desc">Сервис совместного планирования досуга — от кастдева до MVP и теста спроса</div>
         <div class="case-footer">
           <div class="case-tags"><span class="case-tag">0→1</span><span class="case-tag">Consumer</span><span class="case-tag">ВШЭ</span></div>
           <span class="case-arr"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.50707 0.00109648C9.78064 0.00408165 10.0012 0.226813 10.0012 0.501096C10.0014 0.514486 10.0064 0.919801 10.0618 1.755C10.1488 3.06931 10.0439 2.95892 10.1008 3.40246L10.1213 3.60266L10.1223 3.61145V3.62024C10.1262 3.74527 10.1254 3.85645 10.1145 3.99426C10.1094 4.05801 10.1016 4.13063 10.094 4.21008C10.086 4.293 10.0761 4.39685 10.0657 4.53821C10.0452 4.81345 9.80574 5.02037 9.5305 5.00012C9.25512 4.97969 9.04913 4.73937 9.06957 4.46399C9.0807 4.31396 9.08944 4.20255 9.09789 4.11438C9.10665 4.02292 9.11324 3.9679 9.11742 3.91516C9.12459 3.82449 9.12575 3.75336 9.12328 3.66516C9.09901 3.32239 9.16435 3.38041 9.06566 1.87024C8.7608 2.16941 8.45513 2.49409 8.27855 2.70032C8.08296 2.92868 7.75267 3.26421 7.41039 3.59485C6.98462 4.00612 6.63699 4.26282 6.36644 4.45227C6.07219 4.65831 5.95494 4.73229 5.87425 4.82336C5.61111 5.1205 5.13915 5.55753 4.8557 5.84387C4.54096 6.16184 4.0379 6.83717 3.41625 7.76965C2.90122 8.54219 2.32597 9.25922 1.84789 9.80774C1.38 10.3446 0.978317 10.7513 0.811754 10.8839C0.595705 11.0558 0.280567 11.0198 0.108629 10.8038C-0.0631986 10.5878 -0.027268 10.2726 0.188707 10.1007C0.276547 10.0307 0.625647 9.68784 1.09398 9.15051C1.55231 8.62464 2.09929 7.94235 2.58421 7.21496C3.20281 6.28708 3.75367 5.5359 4.14476 5.14074C4.493 4.78894 4.88248 4.43644 5.12621 4.16125C5.30856 3.95534 5.57242 3.78753 5.7932 3.63293C6.03782 3.46163 6.33964 3.23777 6.71507 2.87512C7.05393 2.5478 7.35578 2.24022 7.51878 2.04992C7.70604 1.83124 8.00881 1.5095 8.31566 1.20617C8.24367 1.203 8.1708 1.1997 8.09984 1.1925C7.76002 1.15799 7.83424 1.21369 7.41039 1.28625L7.40257 1.28723L7.39574 1.28821C7.25968 1.30749 7.0953 1.32702 6.79418 1.39758C6.47827 1.47161 6.06561 1.59074 5.76976 1.74328C5.52437 1.86992 5.22159 1.77383 5.09496 1.52844C4.96867 1.28318 5.06565 0.982208 5.31078 0.855589C5.71925 0.644813 6.22965 0.50271 6.56566 0.423948C6.90354 0.344776 7.10729 0.319491 7.24046 0.300901C7.66658 0.227996 7.56622 0.179849 7.90257 0.213987C8.01707 0.225616 8.44873 0.212671 8.59691 0.213987C8.70741 0.214972 9.13134 0.0742238 9.36644 0.0206277C9.38558 0.0152547 9.40504 0.0110095 9.42503 0.00793241C9.45678 0.00212489 9.48276 -0.000626154 9.50023 0.000119914C9.50269 0.000230285 9.50496 0.000786445 9.50707 0.00109648Z" fill="currentColor"/></svg></span>
@@ -1449,6 +1449,198 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 </footer>
 
 </div><!-- /#case-page-3 -->
+
+<div id="case-page-4" class="cs-page" style="display:none">
+
+<nav class="cs-nav">
+  <div class="cs-nav-left">
+    <a href="#" onclick="showPage('main');return false;" class="cs-logo">AP</a>
+    <a href="#" onclick="goCases();return false;" class="cs-back">← Все кейсы</a>
+  </div>
+  <a href="https://t.me/zefirqa" class="cs-nav-tg">Написать в тг</a>
+</nav>
+<!-- HERO -->
+<div class="cs-hero">
+  <div>
+    <div class="rf-kicker">Что делаем? · 0→1 · consumer</div>
+    <h1 class="cs-h1">20&nbsp;интервью развернули «каталог мест»<br>в&nbsp;сервис, который закрывает выбор за&nbsp;компанию</h1>
+    <p class="cs-desc">Мобильный сервис для&nbsp;компаний друзей: за&nbsp;30&nbsp;секунд собирает три варианта вечера под&nbsp;настроение и&nbsp;вкусы всех, а&nbsp;спорный выбор закрывает голосованием. Командный 0→1-проект во&nbsp;ВШЭ: я&nbsp;вела исследование и&nbsp;продукт, а&nbsp;напарница отвечала за&nbsp;продвижение и&nbsp;экономику.</p>
+    <div class="cs-metarow">
+      <div><div class="k">Роль</div><div class="v">Продуктовый дизайнер: исследование и&nbsp;продукт</div></div>
+      <div><div class="k">Скоуп</div><div class="v">0→1 · CustDev · UI · Тест спроса</div></div>
+    </div>
+  </div>
+  <div class="cs-hero-visual" aria-hidden="true">
+    <img class="cs-phone cs-phone-a" src="assets/chd-hero-a.webp" alt="" decoding="async">
+    <img class="cs-phone cs-phone-b" src="assets/chd-hero-b.webp" alt="" decoding="async">
+  </div>
+</div>
+<!-- PROBLEM -->
+<div class="cs-problem-outer">
+  <div class="rf-clab rf-prob">Проблема</div>
+  <h2 class="cs-h2">Пока компания час выбирает в&nbsp;чате, вечер срывается, а&nbsp;организатор выгорает</h2>
+  <p class="cs-text" style="max-width:760px">Договориться о&nbsp;совместном плане всегда сложно: предпочтения у&nbsp;всех разные, важное тонет в&nbsp;переписке, решение затягивается. В&nbsp;итоге один человек становится организатором, тратит силы на&nbsp;сбор хотелок и&nbsp;выгорает. Связь ослабевает, и&nbsp;встречи откладываются на&nbsp;«как-нибудь потом».</p>
+</div>
+<!-- ORIGIN / TRENDWATCHING -->
+<div class="cs-problem-outer" style="padding-top:120px;padding-bottom:88px">
+  <span class="rf-clab">Откуда взялась идея</span>
+  <h2 class="cs-h2" style="max-width:820px;margin-bottom:6px">Идея выросла из&nbsp;трёх сигналов рынка, а&nbsp;не&nbsp;из&nbsp;догадки</h2>
+  <p class="cs-text" style="max-width:820px">Перед продуктом изучили тренды по&nbsp;отчётам ВЦИОМ, РБК&nbsp;Трендов, СберАналитики и&nbsp;Gitnux: молодёжь устала от&nbsp;думскроллинга и&nbsp;хочет живых встреч, тратит деньги на&nbsp;впечатления, а&nbsp;не&nbsp;на&nbsp;вещи, и&nbsp;спокойнее относится к&nbsp;ИИ-подсказкам, если те дают быстрый понятный ответ. На&nbsp;этом пересечении и&nbsp;родилась гипотеза: людям нужен не&nbsp;ещё один каталог, а&nbsp;инструмент, который помогает выйти из&nbsp;экрана и&nbsp;реально встретиться.</p>
+  <div class="rf-hyp3">
+    <div class="rf-ins">
+      <div class="rf-card-h">Запрос на&nbsp;живые встречи</div>
+      <p class="cs-text">Одиночество и&nbsp;цифровая усталость: люди хотят чаще видеться офлайн, но&nbsp;собраться всё труднее.</p>
+    </div>
+    <div class="rf-ins">
+      <div class="rf-card-h">Усталость от&nbsp;лент</div>
+      <p class="cs-text">Запрос на&nbsp;осознанное время: сервис должен помогать действовать, а&nbsp;не&nbsp;удерживать в&nbsp;экране.</p>
+    </div>
+    <div class="rf-ins">
+      <div class="rf-card-h">ИИ как норма выбора</div>
+      <p class="cs-text">Готовый короткий ответ с&nbsp;объяснением ценится выше, чем ручной поиск по&nbsp;спискам.</p>
+    </div>
+  </div>
+</div>
+<!-- CUSTDEV -->
+<div class="cs-problem-outer" style="padding-top:0;padding-bottom:88px">
+  <span class="rf-clab">CustDev · 20 респондентов</span>
+  <h2 class="cs-h2" style="max-width:760px;margin-bottom:6px">Проверяла три гипотезы: почему компаниям так трудно договориться</h2>
+  <p class="cs-text" style="max-width:760px">Разговаривала с&nbsp;теми, кто регулярно собирается компанией,<br>преимущественно с&nbsp;молодёжью крупных городов.</p>
+  <div style="margin-top:18px"><a class="rf-btn" href="#" rel="noopener">Почитать исследование</a></div>
+  <div class="rf-hyp3">
+    <div class="rf-ins">
+      <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
+      <p class="cs-text">Главная боль&nbsp;— закрыть решение, а&nbsp;не&nbsp;придумать варианты: идей и&nbsp;так много, они тонут в&nbsp;чате.</p>
+      <!-- цитата: вставить реальную из интервью -->
+    </div>
+    <div class="rf-ins">
+      <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
+      <p class="cs-text">Людям сложно сформулировать свои желания и&nbsp;границы, поэтому процесс буксует ещё до&nbsp;выбора места.</p>
+      <!-- цитата: вставить реальную из интервью -->
+    </div>
+    <div class="rf-ins">
+      <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
+      <p class="cs-text">Выбор несёт эмоциональный риск, поэтому его перекладывают на&nbsp;одного, и&nbsp;именно он выгорает.</p>
+      <!-- цитата: вставить реальную из интервью -->
+    </div>
+  </div>
+  <div class="rf-pivot">
+    <div class="rf-pivot-l">Поворот продукта</div>
+    <div class="rf-pivot-t"><span style="color:#D6006E">Люди приходят не&nbsp;за&nbsp;идеями, а&nbsp;чтобы снять с&nbsp;себя риск и&nbsp;ответственность за&nbsp;выбор.</span> Поэтому продукт закрывает решение за&nbsp;компанию: быстрая подборка под&nbsp;настроение и&nbsp;вкусы всех, а&nbsp;спорный выбор закрывает короткое голосование, которое снимает вину с&nbsp;организатора. Это определило все решения ниже</div>
+  </div>
+</div>
+<!-- SOLUTIONS -->
+<div class="cs-screens">
+  <div style="padding:64px 0 8px"><span class="rf-clab">Решения</span></div>
+  <div class="cs-block">
+    <div class="rf-triptych">
+      <img src="assets/chd-onb-signup.webp" onclick="openCsModal(this)" alt="Вход и регистрация" loading="lazy">
+      <img src="assets/chd-onb-interests.webp" onclick="openCsModal(this)" alt="Выбор интересов" loading="lazy">
+      <img src="assets/chd-onb-friends.webp" onclick="openCsModal(this)" alt="Приглашение друзей" loading="lazy">
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-num">01 — Онбординг</div>
+      <h3 class="cs-h3">Анкета и&nbsp;друзья за&nbsp;пару тапов поднимают точность подборки ещё до&nbsp;первой встречи</h3>
+      <p class="cs-sdesc">Вход через привычные сервисы, короткая анкета интересов и&nbsp;приглашение друзей. Прогресс-бар показывает, как каждый шаг повышает точность подборки, поэтому заполнять профиль хочется. К&nbsp;первому экрану человек приходит уже с&nbsp;настроенным контекстом, а&nbsp;не&nbsp;с&nbsp;пустым сервисом.</p>
+      <div class="cs-tags"><span class="cs-tag">Onboarding</span><span class="cs-tag">Interests</span><span class="cs-tag">Invite</span></div>
+    </div>
+  </div>
+  <div class="cs-block">
+    <div class="rf-triptych">
+      <img src="assets/chd-home.webp" onclick="openCsModal(this)" alt="Главный экран" loading="lazy">
+      <img src="assets/chd-mood.webp" onclick="openCsModal(this)" alt="Выбор настроения" loading="lazy">
+      <img src="assets/chd-found.webp" onclick="openCsModal(this)" alt="Подобранные варианты" loading="lazy">
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-num">02 — Сбор встречи</div>
+      <h3 class="cs-h3">Настроение и&nbsp;состав компании задаются за&nbsp;30&nbsp;секунд, и&nbsp;сервис сразу выдаёт три варианта вечера</h3>
+      <p class="cs-sdesc">С&nbsp;главного экрана человек запускает сбор встречи, двигает точку по&nbsp;шкале настроения и&nbsp;отмечает, с&nbsp;кем идёт. На&nbsp;основе анкеты, контекста дня и&nbsp;геолокации сервис подбирает три места, а&nbsp;не&nbsp;бесконечный список, поэтому выбор закрывается быстро.</p>
+      <div class="cs-tags"><span class="cs-tag">Home</span><span class="cs-tag">Mood</span><span class="cs-tag">AI-подбор</span></div>
+    </div>
+  </div>
+  <div class="cs-block">
+    <div class="rf-triptych">
+      <img src="assets/chd-vote-invite.webp" onclick="openCsModal(this)" alt="Приглашение на встречу" loading="lazy">
+      <img src="assets/chd-vote-results.webp" onclick="openCsModal(this)" alt="Результаты голосования" loading="lazy">
+      <img src="assets/chd-event-created.webp" onclick="openCsModal(this)" alt="Событие создано" loading="lazy">
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-num">03 — Голосование</div>
+      <h3 class="cs-h3">Спорный выбор закрывает анонимное голосование и&nbsp;снимает ответственность с&nbsp;одного человека</h3>
+      <p class="cs-sdesc">Если компания не&nbsp;сходится, организатор отправляет подборку на&nbsp;голосование. Ответ анонимный, поэтому никому не&nbsp;неловко, а&nbsp;итог виден всем: побеждает вариант большинства, дата фиксируется, событие создаётся. Решение принимает группа, а&nbsp;не&nbsp;один человек.</p>
+      <div class="cs-tags"><span class="cs-tag">Voting</span><span class="cs-tag">Group</span><span class="cs-tag">Result</span></div>
+    </div>
+  </div>
+  <div class="cs-block">
+    <div class="rf-triptych">
+      <img src="assets/chd-profile.webp" onclick="openCsModal(this)" alt="Профиль пользователя" loading="lazy">
+      <img src="assets/chd-history.webp" onclick="openCsModal(this)" alt="История встреч" loading="lazy">
+      <img src="assets/chd-friends.webp" onclick="openCsModal(this)" alt="Друзья" loading="lazy">
+    </div>
+    <div class="cs-sticky">
+      <div class="cs-num">04 — Профиль и&nbsp;история</div>
+      <h3 class="cs-h3">Профиль и&nbsp;история встреч копят контекст, поэтому каждая новая подборка точнее прежней</h3>
+      <p class="cs-sdesc">Пользователь кастомизирует анкету и&nbsp;статусы, сохраняет прошедшие встречи с&nbsp;фото и&nbsp;впечатлениями, видит друзей и&nbsp;личную статистику. Продукт «узнаёт» человека и&nbsp;компанию, подборки становятся точнее, а&nbsp;накопленные истории и&nbsp;друзья дают повод вернуться.</p>
+      <div class="cs-tags"><span class="cs-tag">Profile</span><span class="cs-tag">History</span><span class="cs-tag">Retention</span></div>
+    </div>
+  </div></div><!-- /cs-screens -->
+<!-- DEMAND VALIDATION -->
+<div class="cs-results-outer" style="padding-top:88px">
+  <span class="rf-clab">Проверка спроса</span>
+  <div class="rf-demand">
+    <div class="rf-demand-body">
+      <h2 class="cs-h2">Проверили спрос ботом, лендингом и&nbsp;рекламой ещё до&nbsp;разработки</h2>
+      <p class="cs-sdesc">Чтобы понять, нужен&nbsp;ли продукт, собрали Telegram-бота с&nbsp;логикой подбора, лендинг с&nbsp;квизом и&nbsp;запустили рекламу. Продвижение и&nbsp;экономику вела напарница, я&nbsp;отвечала за&nbsp;продукт и&nbsp;исследование.</p>
+      <p class="cs-sdesc">Отклик подтвердил, что боль считывается: <span style="color:#D6006E">бота прошли 56&nbsp;человек за&nbsp;два месяца, лендинг собрал 421&nbsp;переход и&nbsp;15&nbsp;прохождений квиза</span>. Выборка маленькая, о&nbsp;product-market fit говорить рано, но&nbsp;гипотеза оправдала следующий шаг.</p>
+      <div class="rf-demand-actions">
+        <a class="rf-btn" href="#" rel="noopener">Открыть бота</a>
+      </div>
+    </div>
+    <div class="rf-demand-media">
+      <img src="assets/chd-demand-hero.webp" alt="Креативы «Что делаем?» для соцсетей" loading="lazy">
+    </div>
+  </div>
+</div>
+<!-- RESULT -->
+<div class="cs-results-outer" style="padding-top:96px">
+  <span class="rf-clab">Результат</span>
+  <div class="cs-results">
+    <div class="cs-results-left">
+      <h2 class="cs-h2">Развернула «каталог мест» в&nbsp;сервис, который закрывает выбор за&nbsp;компанию, и&nbsp;<span class="cs-accent">проверила спрос ещё до&nbsp;кода</span></h2>
+    </div>
+    <div class="cs-res-grid">
+      <div class="cs-res-card"><div class="cs-res-n">4 флоу</div><div class="cs-res-t">онбординг, сбор встречи, голосование и&nbsp;профиль спроектированы 0→1</div></div>
+      <div class="cs-res-card"><div class="cs-res-n">56 человек</div><div class="cs-res-t">прошли Telegram-бота за&nbsp;два месяца теста спроса, без&nbsp;единой строчки кода приложения</div></div>
+    </div>
+  </div>
+</div>
+<!-- CASE FOOTER -->
+<div class="cs-contacts-section">
+  <div class="contacts-wrap">
+    <div>
+      <div class="contacts-heading">Спасибо<br>за интерес)<br><em>Пишите!</em></div>
+    </div>
+    <div class="contact-links">
+      <a href="https://t.me/zefirqa" class="c-link">
+        <div><div class="c-lbl">Telegram</div><div class="c-val">@zefirqa</div></div>
+        <span class="c-arr"><svg width="18" height="18" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.50707 0.00109648C9.78064 0.00408165 10.0012 0.226813 10.0012 0.501096C10.0014 0.514486 10.0064 0.919801 10.0618 1.755C10.1488 3.06931 10.0439 2.95892 10.1008 3.40246L10.1213 3.60266L10.1223 3.61145V3.62024C10.1262 3.74527 10.1254 3.85645 10.1145 3.99426C10.1094 4.05801 10.1016 4.13063 10.094 4.21008C10.086 4.293 10.0761 4.39685 10.0657 4.53821C10.0452 4.81345 9.80574 5.02037 9.5305 5.00012C9.25512 4.97969 9.04913 4.73937 9.06957 4.46399C9.0807 4.31396 9.08944 4.20255 9.09789 4.11438C9.10665 4.02292 9.11324 3.9679 9.11742 3.91516C9.12459 3.82449 9.12575 3.75336 9.12328 3.66516C9.09901 3.32239 9.16435 3.38041 9.06566 1.87024C8.7608 2.16941 8.45513 2.49409 8.27855 2.70032C8.08296 2.92868 7.75267 3.26421 7.41039 3.59485C6.98462 4.00612 6.63699 4.26282 6.36644 4.45227C6.07219 4.65831 5.95494 4.73229 5.87425 4.82336C5.61111 5.1205 5.13915 5.55753 4.8557 5.84387C4.54096 6.16184 4.0379 6.83717 3.41625 7.76965C2.90122 8.54219 2.32597 9.25922 1.84789 9.80774C1.38 10.3446 0.978317 10.7513 0.811754 10.8839C0.595705 11.0558 0.280567 11.0198 0.108629 10.8038C-0.0631986 10.5878 -0.027268 10.2726 0.188707 10.1007C0.276547 10.0307 0.625647 9.68784 1.09398 9.15051C1.55231 8.62464 2.09929 7.94235 2.58421 7.21496C3.20281 6.28708 3.75367 5.5359 4.14476 5.14074C4.493 4.78894 4.88248 4.43644 5.12621 4.16125C5.30856 3.95534 5.57242 3.78753 5.7932 3.63293C6.03782 3.46163 6.33964 3.23777 6.71507 2.87512C7.05393 2.5478 7.35578 2.24022 7.51878 2.04992C7.70604 1.83124 8.00881 1.5095 8.31566 1.20617C8.24367 1.203 8.1708 1.1997 8.09984 1.1925C7.76002 1.15799 7.83424 1.21369 7.41039 1.28625L7.40257 1.28723L7.39574 1.28821C7.25968 1.30749 7.0953 1.32702 6.79418 1.39758C6.47827 1.47161 6.06561 1.59074 5.76976 1.74328C5.52437 1.86992 5.22159 1.77383 5.09496 1.52844C4.96867 1.28318 5.06565 0.982208 5.31078 0.855589C5.71925 0.644813 6.22965 0.50271 6.56566 0.423948C6.90354 0.344776 7.10729 0.319491 7.24046 0.300901C7.66658 0.227996 7.56622 0.179849 7.90257 0.213987C8.01707 0.225616 8.44873 0.212671 8.59691 0.213987C8.70741 0.214972 9.13134 0.0742238 9.36644 0.0206277C9.38558 0.0152547 9.40504 0.0110095 9.42503 0.00793241C9.45678 0.00212489 9.48276 -0.000626154 9.50023 0.000119914C9.50269 0.000230285 9.50496 0.000786445 9.50707 0.00109648Z" fill="currentColor"/></svg></span>
+      </a>
+      <a href="mailto:anastasia.pl.2016@gmail.com" class="c-link">
+        <div><div class="c-lbl">Email</div><div class="c-val">anastasia.pl.2016@gmail.com</div></div>
+        <span class="c-arr"><svg width="18" height="18" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.50707 0.00109648C9.78064 0.00408165 10.0012 0.226813 10.0012 0.501096C10.0014 0.514486 10.0064 0.919801 10.0618 1.755C10.1488 3.06931 10.0439 2.95892 10.1008 3.40246L10.1213 3.60266L10.1223 3.61145V3.62024C10.1262 3.74527 10.1254 3.85645 10.1145 3.99426C10.1094 4.05801 10.1016 4.13063 10.094 4.21008C10.086 4.293 10.0761 4.39685 10.0657 4.53821C10.0452 4.81345 9.80574 5.02037 9.5305 5.00012C9.25512 4.97969 9.04913 4.73937 9.06957 4.46399C9.0807 4.31396 9.08944 4.20255 9.09789 4.11438C9.10665 4.02292 9.11324 3.9679 9.11742 3.91516C9.12459 3.82449 9.12575 3.75336 9.12328 3.66516C9.09901 3.32239 9.16435 3.38041 9.06566 1.87024C8.7608 2.16941 8.45513 2.49409 8.27855 2.70032C8.08296 2.92868 7.75267 3.26421 7.41039 3.59485C6.98462 4.00612 6.63699 4.26282 6.36644 4.45227C6.07219 4.65831 5.95494 4.73229 5.87425 4.82336C5.61111 5.1205 5.13915 5.55753 4.8557 5.84387C4.54096 6.16184 4.0379 6.83717 3.41625 7.76965C2.90122 8.54219 2.32597 9.25922 1.84789 9.80774C1.38 10.3446 0.978317 10.7513 0.811754 10.8839C0.595705 11.0558 0.280567 11.0198 0.108629 10.8038C-0.0631986 10.5878 -0.027268 10.2726 0.188707 10.1007C0.276547 10.0307 0.625647 9.68784 1.09398 9.15051C1.55231 8.62464 2.09929 7.94235 2.58421 7.21496C3.20281 6.28708 3.75367 5.5359 4.14476 5.14074C4.493 4.78894 4.88248 4.43644 5.12621 4.16125C5.30856 3.95534 5.57242 3.78753 5.7932 3.63293C6.03782 3.46163 6.33964 3.23777 6.71507 2.87512C7.05393 2.5478 7.35578 2.24022 7.51878 2.04992C7.70604 1.83124 8.00881 1.5095 8.31566 1.20617C8.24367 1.203 8.1708 1.1997 8.09984 1.1925C7.76002 1.15799 7.83424 1.21369 7.41039 1.28625L7.40257 1.28723L7.39574 1.28821C7.25968 1.30749 7.0953 1.32702 6.79418 1.39758C6.47827 1.47161 6.06561 1.59074 5.76976 1.74328C5.52437 1.86992 5.22159 1.77383 5.09496 1.52844C4.96867 1.28318 5.06565 0.982208 5.31078 0.855589C5.71925 0.644813 6.22965 0.50271 6.56566 0.423948C6.90354 0.344776 7.10729 0.319491 7.24046 0.300901C7.66658 0.227996 7.56622 0.179849 7.90257 0.213987C8.01707 0.225616 8.44873 0.212671 8.59691 0.213987C8.70741 0.214972 9.13134 0.0742238 9.36644 0.0206277C9.38558 0.0152547 9.40504 0.0110095 9.42503 0.00793241C9.45678 0.00212489 9.48276 -0.000626154 9.50023 0.000119914C9.50269 0.000230285 9.50496 0.000786445 9.50707 0.00109648Z" fill="currentColor"/></svg></span>
+      </a>
+      <div class="c-link c-link-static">
+        <div><div class="c-lbl">Телефон</div><div class="c-val">+7 (960) 959 56-77</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="cs-page-footer">
+  <a href="#" onclick="goCases();return false;" class="cs-pf-back">← Все кейсы</a>
+  <span class="cs-pf-info">Анастасия Плотникова · Product Designer · Москва · 2026</span>
+</footer>
+
+</div><!-- /#case-page-4 -->
 
 
 <!-- CASE IMAGE MODAL -->
