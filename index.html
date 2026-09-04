@@ -443,6 +443,11 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   #case-page-3 .cs-phone-b,#case-page-4 .cs-phone-b{top:110px;}
 }
 #case-page .cs-h1,#case-page-2 .cs-h1,#case-page-3 .cs-h1,#case-page-4 .cs-h1{max-width:760px;}
+/* ЧД: hero временно без визуала — одна колонка, пока не встанет статичная картинка */
+#case-page-4 .cs-hero{grid-template-columns:1fr;}
+#case-page-4 .cs-ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
+#case-page-4 .cs-ph-grid .cs-ph{min-height:220px;}
+@media(max-width:768px){#case-page-4 .cs-ph-grid{grid-template-columns:1fr;}}
 .cs-page .rf-kicker{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;color:#D6006E;margin-bottom:20px;}
 .cs-page .rf-clab{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;color:#D6006E;margin:0 0 12px;display:block;}
 .cs-page .rf-prob{color:#1a1a1a;font-weight:400;}
@@ -1470,10 +1475,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
       <div><div class="k">Скоуп</div><div class="v">0→1 · CustDev · UI · Тест спроса</div></div>
     </div>
   </div>
-  <div class="cs-hero-visual" aria-hidden="true">
-    <img class="cs-phone cs-phone-a" src="assets/chd-hero-a.webp" alt="" decoding="async">
-    <img class="cs-phone cs-phone-b" src="assets/chd-hero-b.webp" alt="" decoding="async">
-  </div>
+  <!-- hero-визуал: сюда встанет статичная картинка -->
 </div>
 <!-- PROBLEM -->
 <div class="cs-problem-outer">
@@ -1527,6 +1529,16 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   <div class="rf-pivot">
     <div class="rf-pivot-l">Поворот продукта</div>
     <div class="rf-pivot-t"><span style="color:#D6006E">Люди приходят не&nbsp;за&nbsp;идеями, а&nbsp;чтобы снять с&nbsp;себя риск и&nbsp;ответственность за&nbsp;выбор.</span> Поэтому продукт закрывает решение за&nbsp;компанию: быстрая подборка под&nbsp;настроение и&nbsp;вкусы всех, а&nbsp;спорный выбор закрывает короткое голосование, которое снимает вину с&nbsp;организатора. Это определило все решения ниже</div>
+  </div>
+</div>
+<!-- ARTIFACTS (плейсхолдеры) -->
+<div class="cs-screens">
+  <div style="padding:64px 0 8px"><span class="rf-clab">Артефакты</span></div>
+  <div class="cs-ph-grid">
+    <div class="cs-ph"><div class="cs-ph-in"><div class="cs-ph-tag">USER FLOW</div><div class="cs-ph-txt">Схема пользовательских сценариев · скоро</div></div></div>
+    <div class="cs-ph"><div class="cs-ph-in"><div class="cs-ph-tag">CJM</div><div class="cs-ph-txt">Карта пути пользователя · скоро</div></div></div>
+    <div class="cs-ph"><div class="cs-ph-in"><div class="cs-ph-tag">JTBD</div><div class="cs-ph-txt">Работы, на&nbsp;которые «нанимают» продукт · скоро</div></div></div>
+    <div class="cs-ph"><div class="cs-ph-in"><div class="cs-ph-tag">ДИЗАЙН-СИСТЕМА</div><div class="cs-ph-txt">Компоненты и&nbsp;токены · скоро</div></div></div>
   </div>
 </div>
 <!-- SOLUTIONS -->
