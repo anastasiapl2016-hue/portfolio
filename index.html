@@ -444,13 +444,13 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 }
 #case-page .cs-h1,#case-page-2 .cs-h1,#case-page-3 .cs-h1,#case-page-4 .cs-h1{max-width:760px;}
 /* ЧД: hero с мобилкой справа + мини-анимация */
-#case-page-4 .cs-hero{grid-template-columns:minmax(0,1fr) 480px;align-items:start;}
+#case-page-4 .cs-hero{position:relative;grid-template-columns:minmax(0,1fr) 480px;align-items:start;}
 #case-page-4 .cs-h1{line-height:1.15;}
-#case-page-4 .cs-hero-visual{position:static;width:auto;height:auto;max-width:none;margin-top:44px;display:flex;justify-content:center;align-items:flex-start;}
+#case-page-4 .cs-hero-visual{position:absolute;top:40px;right:0;width:480px;height:auto;max-width:none;margin:0;display:flex;justify-content:center;align-items:flex-start;}
 #case-page-4 .chd-hero-phone{width:100%;max-width:440px;height:auto;transform-origin:50% 60%;animation:chdFloat 4s ease-in-out infinite;filter:drop-shadow(0 24px 40px rgba(0,0,0,.16));}
 @keyframes chdFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-14px) rotate(-1.6deg);}}
 @media(prefers-reduced-motion:reduce){#case-page-4 .chd-hero-phone{animation:none;}}
-@media(max-width:1150px){#case-page-4 .cs-hero-visual{margin-top:24px;margin-bottom:0;justify-content:flex-start;}#case-page-4 .chd-hero-phone{max-width:360px;}}
+@media(max-width:1150px){#case-page-4 .cs-hero-visual{position:static;width:auto;top:auto;right:auto;margin-top:24px;justify-content:flex-start;}#case-page-4 .chd-hero-phone{max-width:360px;}}
 #case-page-4 .cs-ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
 #case-page-4 .cs-ph-grid .cs-ph{min-height:220px;}
 @media(max-width:768px){#case-page-4 .cs-ph-grid{grid-template-columns:1fr;}}
@@ -1572,7 +1572,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
     <div class="rf-ins">
       <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
       <p class="cs-text">Выбор несёт эмоциональный риск, поэтому его перекладывают на&nbsp;одного, и&nbsp;именно он выгорает.</p>
-      <div class="rf-quote">«Я&nbsp;говорю „как хотите“… это не&nbsp;значит, что мне всё равно, это значит, что я&nbsp;не&nbsp;хочу тащить ответственность и&nbsp;спорить».</div>
+      <div class="rf-quote">«Переживаю, конечно… но&nbsp;никто эту ответственность, кроме тебя, не&nbsp;чувствует. Расстраиваешься, хочешь, чтобы как лучше было».</div>
     </div>
   </div>
   <div class="rf-pivot">
