@@ -450,6 +450,13 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 @media(max-width:768px){#case-page-4 .cs-ph-grid{grid-template-columns:1fr;}}
 #case-page-4 .rf-demand-media{margin-top:-48px;justify-content:flex-end;}
 #case-page-4 .rf-demand-media img{max-width:460px;border-radius:20px;}
+#case-page-4 .chd-authors{margin-top:32px;}
+#case-page-4 .chd-authors>.k{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:14px;color:#8a8a8a;margin-bottom:14px;}
+#case-page-4 .chd-authors-row{display:flex;gap:44px;flex-wrap:wrap;}
+#case-page-4 .chd-author{display:flex;flex-direction:column;gap:8px;max-width:220px;}
+#case-page-4 .chd-author img{width:60px;height:60px;display:block;object-fit:contain;}
+#case-page-4 .chd-author-name{font-size:15px;font-weight:600;color:#1a1a1a;}
+#case-page-4 .chd-author-role{font-size:14px;color:#8a8a8a;line-height:1.35;}
 #case-page-4 .rf-demand-actions{gap:8px;}
 /* ЧД: единый вертикальный ритм между секциями (96px сверху, 0 снизу) */
 #case-page-4 .cs-problem-outer,#case-page-4 .cs-results-outer{padding-top:96px;padding-bottom:0;}
@@ -1485,11 +1492,26 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 <div class="cs-hero">
   <div>
     <div class="rf-kicker">Что делаем? · 0→1 · consumer</div>
-    <h1 class="cs-h1">20&nbsp;интервью развернули «каталог мест»<br>в&nbsp;сервис, который закрывает выбор за&nbsp;компанию</h1>
-    <p class="cs-desc">Мобильный сервис для&nbsp;компаний друзей: за&nbsp;30&nbsp;секунд собирает три варианта вечера под&nbsp;настроение и&nbsp;вкусы всех, а&nbsp;спорный выбор закрывает голосованием. Командный 0→1-проект во&nbsp;ВШЭ: я&nbsp;вела исследование и&nbsp;продукт, а&nbsp;напарница отвечала за&nbsp;продвижение и&nbsp;экономику.</p>
+    <h1 class="cs-h1">Собираем вечер для&nbsp;компании за&nbsp;30&nbsp;секунд<br>и&nbsp;снимаем выбор с&nbsp;одного человека</h1>
+    <p class="cs-desc">Мобильный сервис для&nbsp;компаний друзей: подбирает три варианта вечера под&nbsp;настроение и&nbsp;вкусы всех, а&nbsp;спорный выбор закрывает анонимным голосованием. Командный 0→1-проект во&nbsp;ВШЭ: от&nbsp;трендвотчинга и&nbsp;кастдева до&nbsp;MVP и&nbsp;теста спроса.</p>
     <div class="cs-metarow">
-      <div><div class="k">Роль</div><div class="v">Продуктовый дизайнер: исследование и&nbsp;продукт</div></div>
+      <div><div class="k">Роль</div><div class="v">Продуктовый дизайнер</div></div>
       <div><div class="k">Скоуп</div><div class="v">0→1 · CustDev · Тест спроса</div></div>
+    </div>
+    <div class="chd-authors">
+      <div class="k">Два продуктовых дизайнера</div>
+      <div class="chd-authors-row">
+        <div class="chd-author">
+          <img src="assets/chd-author-ap.webp" alt="Анастасия Плотникова" width="60" height="60" loading="lazy">
+          <div class="chd-author-name">Анастасия Плотникова</div>
+          <div class="chd-author-role">Продукт и&nbsp;исследование</div>
+        </div>
+        <div class="chd-author">
+          <img src="assets/chd-author-ah.webp" alt="Анастасия Хабарова" width="60" height="60" loading="lazy">
+          <div class="chd-author-name">Анастасия Хабарова</div>
+          <div class="chd-author-role">Экономика и&nbsp;продвижение</div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- hero-визуал: сюда встанет статичная картинка -->
