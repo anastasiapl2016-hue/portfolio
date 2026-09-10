@@ -444,12 +444,12 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 }
 #case-page .cs-h1,#case-page-2 .cs-h1,#case-page-3 .cs-h1,#case-page-4 .cs-h1{max-width:760px;}
 /* ЧД: hero с мобилкой справа + мини-анимация */
-#case-page-4 .cs-hero{grid-template-columns:minmax(0,1fr) 480px;align-items:start;}
-#case-page-4 .cs-hero-visual{position:static;width:auto;height:auto;max-width:none;display:flex;justify-content:center;align-items:flex-start;}
-#case-page-4 .chd-hero-phone{width:100%;max-width:440px;height:auto;transform-origin:50% 60%;animation:chdFloat 4s ease-in-out infinite;filter:drop-shadow(0 24px 40px rgba(0,0,0,.16));}
+#case-page-4 .cs-hero{grid-template-columns:minmax(0,1fr) 360px;align-items:start;}
+#case-page-4 .cs-hero-visual{position:static;width:auto;height:auto;max-width:none;margin-top:44px;display:flex;justify-content:center;align-items:flex-start;}
+#case-page-4 .chd-hero-phone{width:100%;max-width:320px;height:auto;transform-origin:50% 60%;animation:chdFloat 4s ease-in-out infinite;filter:drop-shadow(0 24px 40px rgba(0,0,0,.16));}
 @keyframes chdFloat{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-14px) rotate(-1.6deg);}}
 @media(prefers-reduced-motion:reduce){#case-page-4 .chd-hero-phone{animation:none;}}
-@media(max-width:1150px){#case-page-4 .cs-hero-visual{margin-top:24px;justify-content:flex-start;}#case-page-4 .chd-hero-phone{max-width:360px;}}
+@media(max-width:1150px){#case-page-4 .cs-hero-visual{margin-top:24px;justify-content:flex-start;}#case-page-4 .chd-hero-phone{max-width:280px;}}
 #case-page-4 .cs-ph-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
 #case-page-4 .cs-ph-grid .cs-ph{min-height:220px;}
 @media(max-width:768px){#case-page-4 .cs-ph-grid{grid-template-columns:1fr;}}
@@ -1498,7 +1498,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   <div>
     <div class="rf-kicker">Что делаем? · 0→1 · consumer</div>
     <h1 class="cs-h1">Как два дизайнера проверили продукт ещё до&nbsp;кода<br>и&nbsp;собрали 56&nbsp;пользователей за&nbsp;два месяца</h1>
-    <p class="cs-desc">Собрали Telegram-бота с&nbsp;логикой подбора и&nbsp;запустили рекламу, чтобы проверить спрос ещё до&nbsp;разработки. Само приложение помогает компаниям друзей за&nbsp;30&nbsp;секунд выбрать, куда пойти, и&nbsp;снимает решение с&nbsp;одного человека. Командный 0→1-проект во&nbsp;ВШЭ: от&nbsp;трендвотчинга и&nbsp;кастдева до&nbsp;MVP и&nbsp;теста спроса.</p>
+    <p class="cs-desc">Приложение помогает компаниям друзей за&nbsp;30&nbsp;секунд выбрать, куда пойти, и&nbsp;снимает решение с&nbsp;одного человека. Чтобы проверить спрос ещё до&nbsp;разработки, собрали Telegram-бота с&nbsp;логикой подбора и&nbsp;запустили рекламу. Командный 0→1-проект во&nbsp;ВШЭ: от&nbsp;трендвотчинга и&nbsp;кастдева до&nbsp;MVP и&nbsp;теста спроса.</p>
     <div class="cs-metarow">
       <div><div class="k">Роль</div><div class="v">Продуктовый дизайнер, соавтор продукта</div></div>
       <div><div class="k">Скоуп</div><div class="v">0→1 · CustDev · Тест спроса</div></div>
@@ -1561,17 +1561,17 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
     <div class="rf-ins">
       <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
       <p class="cs-text">Главная боль&nbsp;— закрыть решение, а&nbsp;не&nbsp;придумать варианты: идей и&nbsp;так много, они тонут в&nbsp;чате.</p>
-      <!-- цитата: вставить реальную из интервью -->
+      <div class="rf-quote">«Это больше сложно, чем договориться,&nbsp;— найти что-то интересное… нечего смотреть, непонятно».</div>
     </div>
     <div class="rf-ins">
       <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
       <p class="cs-text">Людям сложно сформулировать свои желания и&nbsp;границы, поэтому процесс буксует ещё до&nbsp;выбора места.</p>
-      <!-- цитата: вставить реальную из интервью -->
+      <div class="rf-quote">«Сложно&nbsp;— „что хочешь“, непонятно, всё надоело. Мне важно хотя&nbsp;бы понимать свои „точно нет“».</div>
     </div>
     <div class="rf-ins">
       <div class="rf-card-h"><span class="rf-dot rf-dot-yes"></span>Подтвердилось</div>
       <p class="cs-text">Выбор несёт эмоциональный риск, поэтому его перекладывают на&nbsp;одного, и&nbsp;именно он выгорает.</p>
-      <!-- цитата: вставить реальную из интервью -->
+      <div class="rf-quote">«Я&nbsp;говорю „как хотите“… это не&nbsp;значит, что мне всё равно, это значит, что я&nbsp;не&nbsp;хочу тащить ответственность и&nbsp;спорить».</div>
     </div>
   </div>
   <div class="rf-pivot">
