@@ -449,7 +449,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 #case-page-4 .cs-ph-grid .cs-ph{min-height:220px;}
 @media(max-width:768px){#case-page-4 .cs-ph-grid{grid-template-columns:1fr;}}
 #case-page-4 .rf-demand-media{margin-top:0;}
-#case-page-4 .rf-demand-media img{max-width:380px;}
+#case-page-4 .rf-demand-media img{max-width:380px;border-radius:20px;}
 .cs-page .rf-kicker{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;color:#D6006E;margin-bottom:20px;}
 .cs-page .rf-clab{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;color:#D6006E;margin:0 0 12px;display:block;}
 .cs-page .rf-prob{color:#1a1a1a;font-weight:400;}
@@ -468,13 +468,13 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
 .cs-page .rf-demand-actions .rf-clink{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:16px;font-weight:400;}
 .rf-sl-overlay{position:fixed;inset:0;background:rgba(10,12,14,.93);z-index:1000;display:none;align-items:center;justify-content:center;}
 .rf-sl-overlay.open{display:flex;}
-#rf-sl-img{max-width:92vw;max-height:82vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+#rf-sl-img,#chd-sl-img{max-width:92vw;max-height:82vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
 .rf-sl-close{position:absolute;top:24px;right:28px;background:rgba(255,255,255,.14);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:19px;cursor:pointer;}
 .rf-sl-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.14);color:#fff;border:0;width:52px;height:52px;border-radius:50%;font-size:30px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .rf-sl-prev{left:24px;}.rf-sl-next{right:24px;}
 .rf-sl-arrow:hover,.rf-sl-close:hover{background:rgba(255,255,255,.26);}
 .rf-sl-count{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#fff;font-size:15px;font-family:'Inter',sans-serif;background:rgba(255,255,255,.12);padding:6px 15px;border-radius:100px;}
-@media(max-width:768px){.cs-page .rf-demand{grid-template-columns:1fr;gap:28px;}.cs-page .rf-demand-media{margin-top:0;}.rf-sl-arrow{width:44px;height:44px;font-size:24px;}.rf-sl-prev{left:8px;}.rf-sl-next{right:8px;}#rf-sl-img{max-width:96vw;}}
+@media(max-width:768px){.cs-page .rf-demand{grid-template-columns:1fr;gap:28px;}.cs-page .rf-demand-media{margin-top:0;}.rf-sl-arrow{width:44px;height:44px;font-size:24px;}.rf-sl-prev{left:8px;}.rf-sl-next{right:8px;}#rf-sl-img,#chd-sl-img{max-width:96vw;}}
 .cs-page .cs-metarow{display:flex;flex-wrap:wrap;gap:20px 48px;margin-top:32px;}
 .cs-page .cs-metarow>div{flex:0 1 auto;max-width:220px;}
 #case-page-3 .cs-metarow>div:nth-child(2),#case-page-4 .cs-metarow>div:nth-child(2){max-width:none;}
@@ -1636,10 +1636,11 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
       <p class="cs-sdesc">Отклик подтвердил, что боль считывается: <span style="color:#D6006E">бота прошли 56&nbsp;человек за&nbsp;два месяца, лендинг собрал 421&nbsp;переход и&nbsp;15&nbsp;прохождений квиза</span>. Выборка маленькая, о&nbsp;product-market fit говорить рано, но&nbsp;гипотеза оправдала следующий шаг.</p>
       <div class="rf-demand-actions">
         <a class="rf-btn" href="#" rel="noopener">Открыть бота</a>
+        <button class="rf-btn" onclick="openChdSlider()">Посмотреть цифры</button>
       </div>
     </div>
     <div class="rf-demand-media">
-      <img src="assets/chd-demand-bot.webp?v=2" alt="Telegram-бот «Что делаем?»" loading="lazy">
+      <img src="assets/chd-demand-bot.webp?v=3" alt="Telegram-бот «Что делаем?»" loading="lazy">
     </div>
   </div>
 </div>
@@ -1872,6 +1873,19 @@ document.addEventListener('keydown',function(e){
   var o=document.getElementById('rf-slider'); if(!o||!o.classList.contains('open')) return;
   if(e.key==='ArrowRight')slideStep(1); else if(e.key==='ArrowLeft')slideStep(-1); else if(e.key==='Escape')closeSlider();
 });
+
+// ЧД demand slider (цифры продвижения)
+var chdSlides=[]; for(var _c=1;_c<=4;_c++) chdSlides.push('assets/chd-slide-'+_c+'.webp');
+var chdIdx=0;
+function chdShow(){var img=document.getElementById('chd-sl-img');if(img){img.src=chdSlides[chdIdx];document.getElementById('chd-sl-i').textContent=chdIdx+1;}}
+function openChdSlider(){chdIdx=0;chdShow();document.getElementById('chd-slider').classList.add('open');document.body.style.overflow='hidden';}
+function closeChdSlider(){document.getElementById('chd-slider').classList.remove('open');document.body.style.overflow='';}
+function chdStep(d){chdIdx=(chdIdx+d+chdSlides.length)%chdSlides.length;chdShow();}
+function chdSlBg(e){if(e.target.id==='chd-slider')closeChdSlider();}
+document.addEventListener('keydown',function(e){
+  var o=document.getElementById('chd-slider'); if(!o||!o.classList.contains('open')) return;
+  if(e.key==='ArrowRight')chdStep(1); else if(e.key==='ArrowLeft')chdStep(-1); else if(e.key==='Escape')closeChdSlider();
+});
 </script>
 
 <!-- KARMA MODAL -->
@@ -1889,6 +1903,15 @@ document.addEventListener('keydown',function(e){
   <img id="rf-sl-img" src="assets/roofly-slide-1.webp" alt="Слайд проверки спроса">
   <button class="rf-sl-arrow rf-sl-next" onclick="slideStep(1)" aria-label="Вперёд">›</button>
   <div class="rf-sl-count"><span id="rf-sl-i">1</span> / 7</div>
+</div>
+
+<!-- ЧД DEMAND SLIDER -->
+<div id="chd-slider" class="rf-sl-overlay" onclick="chdSlBg(event)">
+  <button class="rf-sl-close" onclick="closeChdSlider()" aria-label="Закрыть">✕</button>
+  <button class="rf-sl-arrow rf-sl-prev" onclick="chdStep(-1)" aria-label="Назад">‹</button>
+  <img id="chd-sl-img" src="assets/chd-slide-1.webp" alt="Слайд с цифрами продвижения">
+  <button class="rf-sl-arrow rf-sl-next" onclick="chdStep(1)" aria-label="Вперёд">›</button>
+  <div class="rf-sl-count"><span id="chd-sl-i">1</span> / 4</div>
 </div>
 <script>
 (function(){
