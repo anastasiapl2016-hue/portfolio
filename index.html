@@ -80,22 +80,22 @@ h1{font-family:'Inter',sans-serif;font-size:28px;font-weight:700;line-height:0.9
 .sec-count{font-size:16px;color:var(--muted);}
 
 /* ── CASES ── */
-.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.case-card{background:var(--surface);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:background .2s;text-decoration:none;color:inherit;}
-
+.cases-grid{display:flex;flex-direction:column;gap:24px;}
+.case-card{background:var(--surface);border-radius:20px;overflow:hidden;display:flex;flex-direction:row;align-items:stretch;min-height:400px;transition:background .2s;text-decoration:none;color:inherit;}
+.case-card:hover{background:#e7e7e7;}
 .case-card:hover .case-name{color:#D6006E;}
 .case-card:hover .case-arr{color:#D6006E;}
 .case-arr svg{width:20px;height:20px;}
-.case-thumb{width:100%;background:#EFEFEF;overflow:hidden;position:relative;}
-.case-thumb img{width:100%;display:block;max-height:360px;object-fit:cover;}
+.case-thumb{order:2;flex:0 0 46%;align-self:stretch;background:#EFEFEF;overflow:hidden;position:relative;}
+.case-thumb img{width:100%;height:100%;display:block;object-fit:cover;}
 .case-thumb .thumb-hi{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity .35s ease;}
 .case-card:hover .case-thumb .thumb-hi{opacity:1;}
-.case-thumb-ph{height:200px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--muted);}
-.case-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;gap:0;}
+.case-thumb-ph{height:100%;min-height:200px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--muted);}
+.case-body{order:1;flex:1;padding:52px 56px;display:flex;flex-direction:column;justify-content:center;gap:0;}
 .case-num{font-family:'Inter',sans-serif;font-weight:700;font-size:16px;color:var(--muted);margin-bottom:4px;}
-.case-name{font-family:'Inter',sans-serif;font-size:20px;font-weight:400;line-height:24px;margin-bottom:4px;transition:color .2s;}
-.case-desc{font-size:16px;color:var(--muted);line-height:1.65;flex:1;}
-.case-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-top:32px;}
+.case-name{font-family:'Inter',sans-serif;font-size:28px;font-weight:400;line-height:32px;margin-bottom:10px;transition:color .2s;}
+.case-desc{font-size:17px;color:var(--muted);line-height:1.6;max-width:440px;}
+.case-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-top:36px;}
 .case-tags{display:flex;gap:0;flex-wrap:wrap;align-items:center;}
 .case-tag{background:transparent;padding:0;font-size:16px;color:var(--muted);}
 .case-tag+.case-tag::before{content:'·';padding:0 6px;color:var(--muted);}
@@ -299,7 +299,13 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   
   
   .sec{padding:48px 20px;}
-  .cases-grid{grid-template-columns:1fr;gap:16px;}
+  .cases-grid{gap:16px;}
+  .case-card{flex-direction:column;min-height:0;}
+  .case-thumb{flex:none;width:100%;aspect-ratio:16/11;}
+  .case-body{padding:28px 24px 30px;}
+  .case-name{font-size:22px;line-height:26px;}
+  .case-desc{max-width:none;}
+  .case-footer{margin-top:24px;}
   .exp-flex{flex-direction:column;gap:0;}
   .exp-flex .roadmap{flex:none;width:100%;}
   .flower-side{display:none;}
@@ -343,7 +349,10 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   
   
   .sec{padding:64px 32px;}
-  .cases-grid{grid-template-columns:1fr 1fr;gap:16px;}
+  .case-card{min-height:340px;}
+  .case-body{padding:40px 40px;}
+  .case-name{font-size:24px;line-height:28px;}
+  .case-desc{font-size:16px;}
   .exp-flex{gap:40px;}
   .exp-flex .roadmap{flex:1 1 auto;min-width:0;}
   .flower-side{flex:0 0 160px;}
@@ -642,7 +651,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   </div>
   <div class="cases-grid fade">
     <a class="case-card" href="#" onclick="showPage('case');return false;">
-      <div class="case-thumb"><img src="assets/arm-cover.webp" alt="АРМ Логиста" loading="lazy"><img src="assets/arm-thumb-hi.webp" alt="" class="thumb-hi" aria-hidden="true" loading="lazy"></div>
+      <div class="case-thumb"><img src="assets/case-cover-arm.webp" alt="АРМ Логиста" loading="lazy"></div>
       <div class="case-body">
         <div class="case-name">АРМ Логиста</div>
         <div class="case-desc">Внутренняя система управления заказами и маршрутами — МТС Логистика</div>
@@ -653,7 +662,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
       </div>
     </a>
     <a class="case-card" href="#" onclick="showPage('case-page-2');return false;">
-      <div class="case-thumb"><div class="case-thumb-ph">Sale B2B</div></div>
+      <div class="case-thumb"><img src="assets/case-cover-sale.webp" alt="Sale B2B" loading="lazy"></div>
       <div class="case-body">
         <div class="case-name">Sale B2B</div>
         <div class="case-desc">Кабинет продавца — инструменты управления продажами для B2B-клиентов МТС</div>
@@ -664,7 +673,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
       </div>
     </a>
     <a class="case-card" href="#" onclick="showPage('case-page-3');return false;">
-      <div class="case-thumb"><div class="case-thumb-ph">Roofly</div></div>
+      <div class="case-thumb"><img src="assets/case-cover-roofly.webp" alt="Roofly" loading="lazy"></div>
       <div class="case-body">
         <div class="case-name">Roofly</div>
         <div class="case-desc">Сервис взаимодействия с соседями — от кастдева до MVP и рекламной кампании</div>
@@ -675,7 +684,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
       </div>
     </a>
     <a class="case-card" href="#" onclick="showPage('case-page-4');return false;">
-      <div class="case-thumb"><div class="case-thumb-ph">Что делаем?</div></div>
+      <div class="case-thumb"><img src="assets/case-cover-chd.webp" alt="Что делаем?" loading="lazy"></div>
       <div class="case-body">
         <div class="case-name">Что делаем?</div>
         <div class="case-desc">Сервис совместного планирования досуга — от кастдева до MVP и теста спроса</div>
@@ -686,7 +695,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
       </div>
     </a>
     <a class="case-card" href="#">
-      <div class="case-thumb"><div class="case-thumb-ph">Скоро</div></div>
+      <div class="case-thumb"><img src="assets/case-cover-callpanda.webp" alt="CallPanda" loading="lazy"></div>
       <div class="case-body">
         <div class="case-name">CallPanda</div>
         <div class="case-desc">Платформа для видеоинтервью — маркетинг, UI, брендинг для HR-tech стартапа</div>
