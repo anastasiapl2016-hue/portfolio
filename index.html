@@ -82,7 +82,8 @@ h1{font-family:'Inter',sans-serif;font-size:28px;font-weight:700;line-height:0.9
 /* ── CASES ── */
 .cases-grid{display:flex;flex-direction:column;gap:24px;}
 .case-card{background:transparent;display:flex;flex-direction:row;align-items:stretch;min-height:400px;text-decoration:none;color:inherit;}
-.case-card:hover .case-body{background:#e7e7e7;}
+.case-thumb::after{content:"";position:absolute;inset:0;border-radius:inherit;background:#D6006E;opacity:0;transition:opacity .3s ease;pointer-events:none;}
+.case-card:hover .case-thumb::after{opacity:.2;}
 .case-card:hover .case-name{color:#D6006E;}
 .case-card:hover .case-arr{color:#D6006E;}
 .case-arr svg{width:20px;height:20px;}
