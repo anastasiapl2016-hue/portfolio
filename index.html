@@ -2095,6 +2095,21 @@ document.addEventListener('keydown',function(e){
     btn.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' ') doCopy(e); });
   });
 })();
+/* плавный скролл по якорям навигации — из текущей позиции, без прыжка наверх */
+(function(){
+  var NAV=88;
+  function smoothTo(el){
+    var top=el.getBoundingClientRect().top+window.pageYOffset-NAV;
+    window.scrollTo({top:Math.max(0,Math.round(top)),behavior:'smooth'});
+  }
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href').slice(1);
+      var el=id&&document.getElementById(id);
+      if(el){ e.preventDefault(); smoothTo(el); }
+    });
+  });
+})();
 </script>
 </body>
 </html>
