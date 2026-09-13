@@ -42,8 +42,8 @@ body{
 .fh-glyph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
 .fh-glyph-email svg{width:60%;height:60%;display:block;}
 .fh-phone-wrap{position:relative;display:inline-flex;}
-.fh-phone-pop{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);background:#fff;border:1px solid #ececec;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.16);padding:16px 16px 14px;width:196px;z-index:60;display:none;flex-direction:column;align-items:center;gap:10px;opacity:0;transition:opacity .16s ease,transform .16s ease;}
-.fh-phone-pop.open{display:flex;opacity:1;transform:translateX(-50%) translateY(0);}
+.fh-phone-pop{position:fixed;left:0;top:0;transform:translate(-50%,-6px);background:#fff;border:1px solid #ececec;border-radius:16px;box-shadow:0 16px 44px rgba(0,0,0,.16);padding:16px 16px 14px;width:196px;z-index:9000;display:none;flex-direction:column;align-items:center;gap:10px;opacity:0;transition:opacity .16s ease,transform .16s ease;}
+.fh-phone-pop.open{display:flex;opacity:1;transform:translate(-50%,0);}
 .fh-phone-pop::before{content:"";position:absolute;bottom:100%;left:50%;transform:translateX(-50%);border:7px solid transparent;border-bottom-color:#fff;}
 .pp-qr{width:132px;height:132px;}
 .pp-qr svg{width:100%;height:100%;display:block;}
@@ -2019,15 +2019,18 @@ document.addEventListener('keydown',function(e){
 </script>
 <script>
 (function(){
-  var wrap=document.getElementById('phoneWrap'), ic=document.getElementById('phoneIc'),
-      pop=document.getElementById('phonePop'), copy=document.getElementById('phoneCopy');
-  if(!wrap||!ic||!pop) return;
+  var ic=document.getElementById('phoneIc'), pop=document.getElementById('phonePop'), copy=document.getElementById('phoneCopy');
+  if(!ic||!pop) return;
+  document.body.appendChild(pop); /* вынести из hero, чтобы стекинг-контекст hero не зажимал */
   var TEL='+79609595677';
   function isDesktop(){ return window.matchMedia('(hover:hover) and (pointer:fine)').matches; }
+  function place(){ var r=ic.getBoundingClientRect(); pop.style.left=(r.left+r.width/2)+'px'; pop.style.top=(r.bottom+14)+'px'; }
+  function open(){ place(); pop.classList.add('open'); }
+  function close(){ pop.classList.remove('open'); }
   ic.addEventListener('click', function(e){
     if(!isDesktop()) return; /* мобилка: обычный звонок tel: */
     e.preventDefault();
-    pop.classList.toggle('open');
+    if(pop.classList.contains('open')) close(); else open();
   });
   if(copy){
     copy.addEventListener('click', function(e){
@@ -2036,8 +2039,10 @@ document.addEventListener('keydown',function(e){
       if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(TEL).then(done).catch(done); } else { done(); }
     });
   }
-  document.addEventListener('click', function(e){ if(!wrap.contains(e.target)) pop.classList.remove('open'); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') pop.classList.remove('open'); });
+  document.addEventListener('click', function(e){ if(e.target!==ic && !ic.contains(e.target) && !pop.contains(e.target)) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  window.addEventListener('scroll', function(){ if(pop.classList.contains('open')) place(); }, {passive:true});
+  window.addEventListener('resize', function(){ if(pop.classList.contains('open')) place(); });
 })();
 </script>
 </body>
