@@ -2048,5 +2048,13 @@ document.addEventListener('keydown',function(e){
   window.addEventListener('resize', function(){ if(pop.classList.contains('open')) place(); });
 })();
 </script>
+<script>
+/* внешние ссылки — открывать в новой вкладке, не уводя с портфолио */
+(function(){
+  document.querySelectorAll('a[href^="http"]').forEach(function(a){
+    try{ if(new URL(a.href).origin !== location.origin){ a.target='_blank'; a.rel='noopener noreferrer'; } }catch(e){}
+  });
+})();
+</script>
 </body>
 </html>
