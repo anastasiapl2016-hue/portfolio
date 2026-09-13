@@ -44,7 +44,10 @@ body{
 .fh-phone-wrap{position:relative;display:inline-flex;}
 .fh-phone-pop{position:fixed;left:0;top:0;transform:translate(-6px,-50%);background:#FF9CD1;border-radius:18px;box-shadow:0 16px 44px rgba(0,0,0,.18);padding:16px 18px;z-index:9000;display:none;flex-direction:row;align-items:center;gap:16px;opacity:0;transition:opacity .16s ease,transform .16s ease;}
 .fh-phone-pop.open{display:flex;opacity:1;transform:translate(0,-50%);}
+.fh-phone-pop.flip-left{transform:translate(calc(-100% + 6px),-50%);}
+.fh-phone-pop.flip-left.open{transform:translate(-100%,-50%);}
 .fh-phone-pop::before{content:"";position:absolute;right:100%;top:50%;transform:translateY(-50%);border:7px solid transparent;border-right-color:#FF9CD1;}
+.fh-phone-pop.flip-left::before{right:auto;left:100%;border-right-color:transparent;border-left-color:#FF9CD1;}
 .pp-left{display:flex;flex-direction:column;align-items:flex-start;gap:8px;}
 .pp-scan{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#1a1a1a;}
 .pp-num{font-size:18px;font-weight:700;color:#1a1a1a;white-space:nowrap;letter-spacing:.01em;}
@@ -2032,7 +2035,10 @@ document.addEventListener('keydown',function(e){
   document.body.appendChild(pop); /* вынести из hero, чтобы стекинг-контекст hero не зажимал */
   var TEL='+79609595677';
   function isDesktop(){ return window.matchMedia('(hover:hover) and (pointer:fine)').matches; }
-  function place(){ var r=ic.getBoundingClientRect(); pop.style.left=(r.right+14)+'px'; pop.style.top=(r.top+r.height/2)+'px'; }
+  function place(){ var r=ic.getBoundingClientRect(); var w=pop.offsetWidth||360;
+    if(r.right+14+w <= window.innerWidth-8){ pop.classList.remove('flip-left'); pop.style.left=(r.right+14)+'px'; }
+    else { pop.classList.add('flip-left'); pop.style.left=(r.left-14)+'px'; }
+    pop.style.top=(r.top+r.height/2)+'px'; }
   function open(){ place(); pop.classList.add('open'); }
   function close(){ pop.classList.remove('open'); }
   ic.addEventListener('click', function(e){
