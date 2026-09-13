@@ -43,11 +43,11 @@ body{
 .fh-glyph-email svg{width:60%;height:60%;display:block;}
 .fh-phone-wrap{position:relative;display:inline-flex;}
 .fh-phone-pop{position:fixed;left:0;top:0;width:316px;height:128px;background:#FF9CD1;border-radius:18px;padding:0;z-index:9000;display:none;flex-direction:row;align-items:stretch;opacity:0;--n:8px;--dx:192px;-webkit-mask:radial-gradient(circle var(--n) at var(--dx) 0,#0000 calc(var(--n) - 1px),#000 var(--n)),radial-gradient(circle var(--n) at var(--dx) 100%,#0000 calc(var(--n) - 1px),#000 var(--n));-webkit-mask-composite:source-in;mask:radial-gradient(circle var(--n) at var(--dx) 0,#0000 calc(var(--n) - 1px),#000 var(--n)),radial-gradient(circle var(--n) at var(--dx) 100%,#0000 calc(var(--n) - 1px),#000 var(--n));mask-composite:intersect;transform:translateY(-50%) rotate(-3deg) scale(1);transform-origin:left center;}
-.fh-phone-pop.open{display:flex;opacity:1;animation:stickerSlap .4s cubic-bezier(.25,.85,.35,1) both;}
+.fh-phone-pop.open{display:flex;opacity:1;animation:stickerSlap .52s cubic-bezier(.5,0,.4,1) both;}
 .fh-phone-pop.flip-left{transform:translateY(-50%) translateX(-100%) rotate(-3deg) scale(1);transform-origin:right center;}
-.fh-phone-pop.flip-left.open{animation:stickerSlapLeft .4s cubic-bezier(.25,.85,.35,1) both;}
-@keyframes stickerSlap{0%{opacity:0;transform:translateY(-50%) rotate(8deg) scale(1.16);}55%{opacity:1;transform:translateY(-50%) rotate(-4.5deg) scale(.96);}78%{transform:translateY(-50%) rotate(-1.8deg) scale(1.012);}100%{opacity:1;transform:translateY(-50%) rotate(-3deg) scale(1);}}
-@keyframes stickerSlapLeft{0%{opacity:0;transform:translateY(-50%) translateX(-100%) rotate(8deg) scale(1.16);}55%{opacity:1;transform:translateY(-50%) translateX(-100%) rotate(-4.5deg) scale(.96);}78%{transform:translateY(-50%) translateX(-100%) rotate(-1.8deg) scale(1.012);}100%{opacity:1;transform:translateY(-50%) translateX(-100%) rotate(-3deg) scale(1);}}
+.fh-phone-pop.flip-left.open{animation:stickerSlapLeft .52s cubic-bezier(.5,0,.4,1) both;}
+@keyframes stickerSlap{0%{opacity:0;transform:translateY(-50%) rotate(-3deg) scale(0);}30%{opacity:1;}55%{transform:translateY(-50%) rotate(-.5deg) scale(1.14);}72%{transform:translateY(-50%) rotate(-5deg) scale(.92);}86%{transform:translateY(-50%) rotate(-2.2deg) scale(1.045);}100%{opacity:1;transform:translateY(-50%) rotate(-3deg) scale(1);}}
+@keyframes stickerSlapLeft{0%{opacity:0;transform:translateY(-50%) translateX(-100%) rotate(-3deg) scale(0);}30%{opacity:1;}55%{transform:translateY(-50%) translateX(-100%) rotate(-.5deg) scale(1.14);}72%{transform:translateY(-50%) translateX(-100%) rotate(-5deg) scale(.92);}86%{transform:translateY(-50%) translateX(-100%) rotate(-2.2deg) scale(1.045);}100%{opacity:1;transform:translateY(-50%) translateX(-100%) rotate(-3deg) scale(1);}}
 .pp-left{width:192px;box-sizing:border-box;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;}
 .pp-scan{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:14px;font-weight:500;letter-spacing:.4px;color:#1a1a1a;}
 .pp-numrow{display:flex;align-items:center;gap:8px;}
