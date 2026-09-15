@@ -2143,6 +2143,21 @@ document.addEventListener('keydown',function(e){
     try{ window.pfTrack && window.pfTrack('contact:'+kind); }catch(e){}
   });
 })();
+/* аналитика: досмотрел кейс до конца (доскролл до блока «Результат») */
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  var seen={};
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var page=e.target.closest && e.target.closest('.cs-page');
+      var id=page?page.id:'unknown';
+      if(seen[id]) return; seen[id]=1;
+      try{ window.pfTrack && window.pfTrack('case_finish:'+(window.pfCaseName?window.pfCaseName(id):id)); }catch(err){}
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('.cs-page .cs-results-outer').forEach(function(el){ io.observe(el); });
+})();
 </script>
 </body>
 </html>
