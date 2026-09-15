@@ -2146,13 +2146,14 @@ document.addEventListener('keydown',function(e){
 /* аналитика: досмотрел кейс до конца (доскролл до блока «Результат») */
 (function(){
   if(!('IntersectionObserver' in window)) return;
-  var seen={};
+  window.__pfFin=window.__pfFin||{};
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(!e.isIntersecting) return;
+      io.unobserve(e.target);                 /* больше не следим за этим блоком */
       var page=e.target.closest && e.target.closest('.cs-page');
       var id=page?page.id:'unknown';
-      if(seen[id]) return; seen[id]=1;
+      if(window.__pfFin[id]) return; window.__pfFin[id]=1;  /* один раз на кейс */
       try{ window.pfTrack && window.pfTrack('case_finish:'+(window.pfCaseName?window.pfCaseName(id):id)); }catch(err){}
     });
   },{threshold:0.1});
