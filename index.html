@@ -614,6 +614,24 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
   "sameAs": ["https://t.me/zefirqa"]
 }
 </script>
+<script>
+/* Аналитика (Microsoft Clarity) + исключение своих заходов + хелпер событий */
+(function(){
+  window.pfTrack=function(n){ try{ if(window.clarity) window.clarity('event',n); }catch(e){} };
+  window.pfCaseName=function(p){ return ({'case':'ARM','case-page':'ARM','case-page-2':'SaleB2B','case-page-3':'Roofly','case-page-4':'CHD'})[p]||p; };
+  try{
+    var q=new URLSearchParams(location.search);
+    if(q.get('owner')==='1'){ localStorage.setItem('pf_owner','1'); }
+    if(q.get('owner')==='0'){ localStorage.removeItem('pf_owner'); }
+    if(localStorage.getItem('pf_owner')==='1'){ window.__pfOwner=true; return; }
+  }catch(e){}
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "yimbjsfg7m");
+})();
+</script>
 </head>
 <body>
 <div id="main-page">
@@ -1834,6 +1852,7 @@ footer{padding:28px 56px 44px;display:flex;justify-content:space-between;align-i
     } else {
       apply(p); jump(0);
       history.pushState({page:p, scroll:0}, '', base() + '#' + p);
+      try{ window.pfTrack && window.pfTrack('case_open:'+window.pfCaseName(p)); }catch(e){}
     }
   };
   function scrollToCases(){
@@ -2108,6 +2127,20 @@ document.addEventListener('keydown',function(e){
       var el=id&&document.getElementById(id);
       if(el){ e.preventDefault(); smoothTo(el); }
     });
+  });
+})();
+/* аналитика: клики по контактам */
+(function(){
+  document.addEventListener('click', function(e){
+    var t=e.target;
+    var a=t.closest && t.closest('a[href^="https://t.me"],a[href^="mailto:"],a[href^="tel:"],.c-copy,.pp-copy-ic,.nav-btn,.cs-nav-tg');
+    if(!a) return;
+    var kind = a.matches('a[href^="https://t.me"]') ? 'telegram'
+             : a.matches('a[href^="mailto:"]') ? 'email'
+             : a.matches('a[href^="tel:"]') ? 'phone'
+             : (a.classList.contains('c-copy')||a.classList.contains('pp-copy-ic')) ? 'copy'
+             : 'contact';
+    try{ window.pfTrack && window.pfTrack('contact:'+kind); }catch(e){}
   });
 })();
 </script>
